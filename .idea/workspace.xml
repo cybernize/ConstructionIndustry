@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0591e32e-8af5-4b0a-b620-fe5496a5abcd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/construction/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/construction/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/construction/src/Components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/construction/src/Components/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/construction/src/Components/Inventory.js" beforeDir="false" afterPath="$PROJECT_DIR$/construction/src/Components/Inventory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/construction/src/Components/createRequisition.js" beforeDir="false" afterPath="$PROJECT_DIR$/construction/src/Components/createRequisition.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/construction/src/css/siteManager.css" beforeDir="false" afterPath="$PROJECT_DIR$/construction/src/css/siteManager.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/construction/src/css/supervisor.css" beforeDir="false" afterPath="$PROJECT_DIR$/construction/src/css/supervisor.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/construction/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/construction/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction/src/Components/SiteManagerHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/construction/src/Components/SiteManagerHome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction/src/Components/SupervisorHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/construction/src/Components/SupervisorHome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/construction/src/Components/SupplierHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/construction/src/Components/SupplierHome.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,19 +21,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/construction/src/Components/Services.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/construction/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-187">
-              <caret line="87" column="71" selection-start-line="87" selection-start-column="71" selection-end-line="87" selection-end-column="71" />
+            <state relative-caret-position="1275">
+              <caret line="90" column="30" selection-end-line="124" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
                 <marker date="1569000840188" expanded="true" signature="1195:1767" ph="..." />
@@ -45,22 +34,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/construction/src/Components/AboutUs.js">
+        <entry file="file://$PROJECT_DIR$/construction/src/Components/SiteManagerHome_Side.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="13" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="102">
+              <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/construction/src/Components/Home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="82" column="92" selection-start-line="82" selection-start-column="92" selection-end-line="82" selection-end-column="92" />
+            <state relative-caret-position="2057">
+              <caret line="130" column="24" selection-start-line="130" selection-start-column="24" selection-end-line="130" selection-end-column="24" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -69,10 +55,67 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/construction/src/Components/SiteManagerHome.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/construction/src/Components/SupplierHome.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="25" column="62" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/construction/src/Components/SupervisorHome.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/construction/src/Components/Home_home.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/construction/src/Components/createRequisition.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1122">
+              <caret line="71" selection-start-line="71" selection-end-line="71" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/construction/src/Components/Inventory.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-493">
-              <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+            <state relative-caret-position="323">
+              <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -83,7 +126,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/construction/src/Components/Login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
+            <state relative-caret-position="1377">
               <caret line="83" column="85" selection-start-line="83" selection-start-column="85" selection-end-line="83" selection-end-column="85" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
@@ -113,12 +156,9 @@
         <option value="$PROJECT_DIR$/construction/src/Components/siteManagerHome.js" />
         <option value="$PROJECT_DIR$/construction/src/css/sidebar.css" />
         <option value="$PROJECT_DIR$/construction/src/Components/Location.js" />
-        <option value="$PROJECT_DIR$/construction/src/Components/SiteManagerHome.js" />
-        <option value="$PROJECT_DIR$/construction/src/Components/SupervisorHome.js" />
         <option value="$PROJECT_DIR$/construction/src/css/authzEmployee.css" />
         <option value="$PROJECT_DIR$/construction/src/Components/AuthzEmployee.js" />
         <option value="$PROJECT_DIR$/construction/src/Components/AuthzEmployeeHome.js" />
-        <option value="$PROJECT_DIR$/construction/src/Components/SupplierHome.js" />
         <option value="$PROJECT_DIR$/construction/src/css/supplier.css" />
         <option value="$PROJECT_DIR$/construction/src/css/portfolio.css" />
         <option value="$PROJECT_DIR$/construction/src/css/supervisor.css" />
@@ -134,9 +174,14 @@
         <option value="$PROJECT_DIR$/construction/src/Components/InventoryDetails.js" />
         <option value="$PROJECT_DIR$/construction/src/Components/Services.js" />
         <option value="$PROJECT_DIR$/construction/src/Components/AboutUs.js" />
-        <option value="$PROJECT_DIR$/construction/src/App.js" />
         <option value="$PROJECT_DIR$/construction/src/Components/Login.js" />
         <option value="$PROJECT_DIR$/construction/src/Components/Home.js" />
+        <option value="$PROJECT_DIR$/construction/src/App.js" />
+        <option value="$PROJECT_DIR$/construction/src/Components/SiteManagerHome_Side.js" />
+        <option value="$PROJECT_DIR$/construction/src/Components/SiteManagerHome.js" />
+        <option value="$PROJECT_DIR$/construction/src/Components/SupplierHome.js" />
+        <option value="$PROJECT_DIR$/construction/src/Components/SupervisorHome.js" />
+        <option value="$PROJECT_DIR$/construction/src/Components/Home_home.js" />
       </list>
     </option>
   </component>
@@ -146,7 +191,7 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="835" />
     <option name="y" value="5" />
     <option name="width" value="980" />
@@ -157,44 +202,16 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="ProcumentSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProcumentSystem" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProcumentSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProcumentSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="construction" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProcumentSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProcumentSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="construction" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProcumentSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProcumentSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="construction" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../react-auth-example-master" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -260,18 +277,19 @@
       <workItem from="1568952094593" duration="9925000" />
       <workItem from="1568966966136" duration="146000" />
       <workItem from="1568967240083" duration="12584000" />
-      <workItem from="1568997264657" duration="4807000" />
+      <workItem from="1568997264657" duration="5439000" />
+      <workItem from="1569127726832" duration="3691000" />
+      <workItem from="1569135278312" duration="3440000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97633000" />
+    <option name="totallyTimeSpent" value="105396000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17114094" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17514871" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -288,7 +306,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.1855524" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.15373352" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -409,36 +427,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/construction/src/Components/SupplierHome.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="18" column="82" selection-start-line="18" selection-start-column="82" selection-end-line="18" selection-end-column="82" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/construction/src/Components/SupervisorHome.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/construction/src/Components/SiteManagerHome.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/routes/requisitionRoutes.js" />
     <entry file="file://$PROJECT_DIR$/backend/model/requisition.js" />
     <entry file="file://$PROJECT_DIR$/backend/app.js">
@@ -462,58 +450,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/construction/src/Components/createRequisition.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="70" column="39" selection-start-line="67" selection-start-column="19" selection-end-line="70" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/construction/src/Components/InventoryDetails.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="61" column="1" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/construction/src/Components/Inventory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-493">
-          <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/construction/src/Components/Services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/construction/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="87" column="71" selection-start-line="87" selection-start-column="71" selection-end-line="87" selection-end-column="71" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-            <marker date="1569000840188" expanded="true" signature="1195:1767" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/construction/src/Components/AboutUs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="13" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
@@ -527,9 +467,110 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/construction/src/serviceWorker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/construction/src/Components/Services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/construction/src/Components/AboutUs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/construction/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="90" column="30" selection-end-line="124" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <marker date="1569000840188" expanded="true" signature="1195:1767" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/construction/src/Components/SiteManagerHome_Side.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/construction/src/Components/Home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2057">
+          <caret line="130" column="24" selection-start-line="130" selection-start-column="24" selection-end-line="130" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/construction/src/Components/SiteManagerHome.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/construction/src/Components/SupplierHome.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="25" column="62" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/construction/src/Components/SupervisorHome.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/construction/src/Components/createRequisition.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/construction/src/Components/Inventory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/construction/src/Components/Login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
+        <state relative-caret-position="1377">
           <caret line="83" column="85" selection-start-line="83" selection-start-column="85" selection-end-line="83" selection-end-column="85" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
@@ -537,10 +578,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/construction/src/Components/Home.js">
+    <entry file="file://$PROJECT_DIR$/construction/src/Components/Home_home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="82" column="92" selection-start-line="82" selection-start-column="92" selection-end-line="82" selection-end-column="92" />
+        <state relative-caret-position="17">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
