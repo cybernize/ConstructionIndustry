@@ -10,7 +10,7 @@ import SiteManagerHome from './Components/SiteManagerHome';
 import Location from './Components/Location';
 import AuthzEmployeeHome from "./Components/AuthzEmployeeHome";
 import SupplierHome from "./Components/SupplierHome";
-import InventoryDetails from './Components/InventoryDetails';
+import RequisitionDetails from './Components/RequisitionDetails';
 import Login from './Components/Login';
 import Services from './Components/Services';
 import AboutUs from './Components/AboutUs';
@@ -72,7 +72,7 @@ class App extends Component {
                                     <Link to={'/Services'} className="nav-link">SERVICES</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to={'/Location'} className="nav-link">LOCATIONS</Link>
+                                    <Link to={'/SiteManagerHome'} className="nav-link">LOCATIONS</Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link to={'/supervisorHome'} className="nav-link">CONTACTUS</Link>
@@ -92,6 +92,7 @@ class App extends Component {
                     </nav>
 
                 </div>
+                
                     </section>
                 {this.state.clickedRequisition ? (
                     <div className="login_style">
@@ -109,16 +110,38 @@ class App extends Component {
                         <Route exact path='/AuthzEmployeeHome' component={AuthzEmployeeHome}/>
                         <Route exact path='/SupplierHome' component={SupplierHome}/>
                         <Route exact path='/Login' component={Login}/>
-                        <Route exact path='/InventoryDetails' component={InventoryDetails}/>
+                        <Route exact path='/RequisitionDetails' component={RequisitionDetails}/>
                         <Route exact path='/Services' component={Services}/>
                         <Route exact path='/AboutUs' component={AboutUs}/>
                         <Route exact path='/Register' component={Register}/>
                     </Switch>
                         )};
-            </Router>
+            </Router><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            <section style={ background }>
+                        <div className="container">
+                    <nav className="navbar navbar-expand-lg navbar-light btn-group-lg bg-transparent">
+                        <div className="navbar-brand">
+                        <div className="collapse navbar-collapse" id="navbarSupportContent">
+                            <ul className="navbar-nav mr-auto">
+                               <li>
+                                   <center><h5>
+                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                   CopyRight @ SriLanka Construction coperation 2019</h5></center>
+                                   <br/>
+                               </li>
+                         </ul>
+                        </div>
+                        </div>
+                    </nav>
+                 </div>
+
+            </section>
             </section>
         )
     }
+    
 }
 export default App;
 

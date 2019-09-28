@@ -4,6 +4,7 @@ import construction from "../Images/construction.png";
 import siteManager from "../Images/siteManager.jpg";
 import {NavLink} from "react-router-dom";
 import Inventory from "./Inventory";
+import axios from 'axios';
 
 const sectionStyle = {
     width: "1080px",
@@ -47,6 +48,7 @@ export default class extends Component{
             clickedInventory: !this.state.clickedInventory,
         });
     }
+
 
     render(){
         return(
