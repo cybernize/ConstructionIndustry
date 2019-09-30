@@ -14,13 +14,16 @@ app.use(cors());
 const Users = require('./routes/registerRoute');
 const Requisitions = require('./routes/requisitionRoute');
 const Products = require('./routes/productsRoute');
-//const Suppliers = require('./routes/Suppliers');
+const PurchaseOrder = require('./routes/purchaseOrderRoute');
+const Suppliers = require('./routes/supplierRoute');
 
 
 //app.use('/posts',postRoute);
 app.use('/register',Users);
 app.use('/requisitions',Requisitions);
 app.use('/products',Products);
+app.use('/purchaseOrder',PurchaseOrder);
+app.use('/suppliers',Suppliers);
 
 
 // Middleware

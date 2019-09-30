@@ -1,13 +1,15 @@
 import React,{Component} from 'react';
 import axios from 'axios';
-import InventoryDetails from "../Images/bg2.jpg";
+import SupplierDetails from "../Images/bg2.jpg";
+import {NavLink} from "react-router-dom";
+
 
 const sectionStyle = {
     width: "1080px",
     height: "550px",
     opacity: 0.7,
-    marginLeft: "54px",
-    backgroundImage: `url(${InventoryDetails})`
+    marginLeft: "204px",
+    backgroundImage: `url(${SupplierDetails})`
 };
 
 const form ={
@@ -21,13 +23,12 @@ export default class extends Component{
     constructor(props){
         super(props);
             this.state={
+                companyName:'',
                 siteName:'',
-                itemName:'',
-                type:'',
-                quantity:'',
-                perAgreedPrice:'',
-                perApprovedSupplier:'',
-                AccountNo:''
+                email:'',
+                regNo:'',
+                cNo:'',
+                cPerson:''
             }
             this.onChange = this.onChange.bind(this);
             this.onSubmit = this.onSubmit.bind(this);   
@@ -44,26 +45,24 @@ export default class extends Component{
         console.log(Date.now());
         e.preventDefault();
 
-        axios.post('http://localhost:3003/requisitions', {
+        axios.post('http://localhost:3003/suppliers', {
+            companyName:this.state.companyName,
             siteName:this.state.siteName,
-            itemName:this.state.itemName,
-            type:this.state.type,
-            quantity:this.state.quantity,
-            perAgreedPrice:this.state.perAgreedPrice,
-            perApprovedSupplier:this.state.perApprovedSupplier,
-            AccountNo: this.state.AccountNo,
-            createdAt: Date.now()
+            email:this.state.email,
+            regNo:this.state.regNo,
+            cNo:this.state.cNo,
+            cPerson:this.state.cPerson
 
-      }).then((requisitions)=>{
-        document.getElementById('sname').value = "";
-        document.getElementById('iname').value = "";
-        document.getElementById('type').value = "";
-        document.getElementById('qty').value = "";
-        document.getElementById('price').value = "";
-        document.getElementById('supplier').value = "";
-        document.getElementById('accNo').value = "";
-        alert('Requisitions have been Created Successfully')
-        console.log(requisitions)
+      }).then((SupplierDetails)=>{
+        document.getElementById('companyName').value = "";
+        document.getElementById('siteName').value = "";
+        document.getElementById('email').value = "";
+        document.getElementById('regNo').value = "";
+        document.getElementById('cNo').value = "";
+        document.getElementById('cPerson').value = "";
+    
+        alert('Added Suppliers Successfully !!!')
+        console.log(SupplierDetails)
       }).catch((err)=>{
         console.log(err)
       })
@@ -81,49 +80,44 @@ export default class extends Component{
                             <br/>
                             <form action="" className="was-validated ">
                                 <section style={ form }><br/>
-                                <center><h2>REQUISITION DETAILS</h2></center>
+                                <center><h2>ADD SUPPLIERS</h2></center>
                                 
                                     <div className="form-row col-sm-20 offset-sm-1 align-content-md-center">
+                                    <div className="col-md-4 mb-3 col-sm-20 offset-sm-1">
+                                        <label htmlFor="details" ><b>Company Name:</b> </label><br></br>
+                                        <input type="text" className="form-control" id="companyName" placeholder="Enter company Name" name="companyName" 
+                                         onChange={event => this.onChange(event)}required/><br/>
+                                        </div>
+
                                         <div className="col-md-4 mb-3 col-sm-20 offset-sm-1">
-                                        <label htmlFor="details" ><b>Site Name : </b></label>
-                                        <input type="text" className="form-control" id="sname" placeholder="Enter SiteName" name="siteName" 
+                                        <label htmlFor="details" ><b>site Name : </b></label>
+                                        <input type="text" className="form-control" id="siteName" placeholder="Enter SiteName" name="siteName" 
                                          onChange={event => this.onChange(event)}required/><br/>
                                         </div>
 
                                          <div className="col-md-4 mb-3 col-sm-20 offset-sm-1">
-                                        <label htmlFor="details" ><b>Item Name:</b> </label><br></br>
-                                        <input type="text" className="form-control" id="iname" placeholder="Enter item Name" name="itemName" 
+                                        <label htmlFor="details" ><b>Email :</b> </label><br></br>
+                                        <input type="text" className="form-control" id="email" placeholder="Enter email" name="email" 
                                          onChange={event => this.onChange(event)}required/><br/>
                                         </div>
 
                                         <div className="col-md-4 mb-3 col-sm-20 offset-sm-1">
-                                        <label htmlFor="details" ><b>Type : </b></label><br></br>
-                                        <input type="text" className="form-control" id="type" placeholder="Enter type" name="type" 
+                                        <label htmlFor="details" ><b>Registration No : </b></label><br></br>
+                                        <input type="number" className="form-control" id="regNo" placeholder="Enter type" name="regNo" 
                                          onChange={event => this.onChange(event)}required/><br/>
                                         </div>
                                         <div className="col-md-4 mb-3 col-sm-20 offset-sm-1">
-                                        <label htmlFor="details" ><b>Quantity : </b></label><br></br>
-                                        <input type="number" className="form-control" id="qty" placeholder="Enter quantity" name="quantity" 
+                                        <label htmlFor="details" ><b>Contact No : </b></label><br></br>
+                                        <input type="number" className="form-control" id="cNo" placeholder="Enter Contact No" name="cNo" 
                                          onChange={event => this.onChange(event)}required/><br/>
                                         </div>
 
                                         <div className="col-md-4 mb-3 col-sm-20 offset-sm-1">
-                                        <label htmlFor="details" ><b>Per Agreed Price : </b></label><br></br>
-                                        <input type="number" className="form-control" id="price" placeholder="Enter quantity" name="perAgreedPrice" 
+                                        <label htmlFor="details" ><b>Contact Person : </b></label><br></br>
+                                        <input type="text" className="form-control" id="cPerson" placeholder="" name="cPerson" 
                                          onChange={event => this.onChange(event)}required/><br/>
                                         </div>
 
-                                        <div className="col-md-4 mb-3 col-sm-20 offset-sm-1">
-                                        <label htmlFor="details" ><b>Per Approved Supplier : </b></label><br></br>
-                                        <input type="text" className="form-control" id="supplier" placeholder="Enter quantity" name="perApprovedSupplier" 
-                                         onChange={event => this.onChange(event)}required/><br/>
-                                        </div>
-
-                                        <div className = "col-sm-9 offset-sm-1 align-content-md-center">
-                                            <label htmalFor="details"><b>Funding Account No</b></label>
-                                            <input type="number" className="form-control" id="accNo" placeholder="Enter AccountNo" name="AccountNo"
-                                             onChange={event => this.onChange(event)} required/><br/>
-                                        </div>
                                     </div>
                                 
                                     <div className="col-sm-9 offset-sm-2 ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -131,7 +125,7 @@ export default class extends Component{
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <br/>
-                                        <button className="btn btn-primary offset-md-1" onClick={this.onSubmit}>MAKE REQUISITION</button>
+                                        <button className="btn btn-primary offset-md-1" onClick={this.onSubmit}>ADD SUPPLIERS</button>
                                         <button className="btn btn-secondary offset-md-1 " >Cancel</button>
                                     </div>
                                     <br/>

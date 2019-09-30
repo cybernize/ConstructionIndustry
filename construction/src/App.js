@@ -15,6 +15,12 @@ import Login from './Components/Login';
 import Services from './Components/Services';
 import AboutUs from './Components/AboutUs';
 import Register from "./Components/Register";
+import CreatePurchaceOrder from './Components/CreatePurchaceOrder';
+import PurchaseOrderDetails from './Components/purchaseOrderDetails';
+import ViewPurchaseOrder from './Components/ViewPurchaseOrder';
+import AddSupplier from './Components/AddSupplier';
+import SupplierDetails from './Components/SupplierDetails';
+
 
 const background = {
   //  background: "linear-gradient(to top right, #9999ff 0%, #ffcc99 104%)",
@@ -29,30 +35,37 @@ const backgroundNav = {
 
 class App extends Component {
 
-    constructor(props) {
-        super(props);
+    // constructor(props) {
+    //     super(props);
 
-        this.state = {
-            clickedRequisition: false,
-            clickedInventory: false,
-        };
+    //     this.state = {
+    //         clickedRequisition: false,
+    //         clickedInventory: false,
+    //         clickedPurchaseOrder:false,
+    //     };
 
-        this.handleClickRequisition = this.handleClickRequisition.bind(this);
-        this.handleClickInventory = this.handleClickInventory.bind(this);
+    //     this.handleClickRequisition = this.handleClickRequisition.bind(this);
+    //     this.handleClickInventory = this.handleClickInventory.bind(this);
+    //     this.handleClickedPurchaseOrder = this.handleClickedPurchaseOrder.bind(this);
 
-    }
+    // }
+    // handleClickedPurchaseOrder(){
+    //     this.setState({
+    //         clickedPurchaseOrder:!this.state.clickedPurchaseOrder
+    //     })
+    // }
 
-    handleClickRequisition() {
-        this.setState({
-            clickedRequisition: !this.state.clickedRequisition,
-        });
-    }
+    // handleClickRequisition() {
+    //     this.setState({
+    //         clickedRequisition: !this.state.clickedRequisition,
+    //     });
+    // }
 
-    handleClickInventory() {
-        this.setState({
-            clickedInventory: !this.state.clickedInventory,
-        });
-    }
+    // handleClickInventory() {
+    //     this.setState({
+    //         clickedInventory: !this.state.clickedInventory,
+    //     });
+    // }
 
     render() {
         return (
@@ -62,14 +75,14 @@ class App extends Component {
                     <section style={ background }>
                         <div className="container">
                     <nav className="navbar navbar-expand-lg navbar-light btn-group-lg bg-transparent">
-                        <Link to={'/Home'} className="navbar-brand"><b><h3>&nbsp;&nbsp;&nbsp;&nbsp;<i>CONSTRUCTION Industry</i></h3></b></Link>
+                        <Link to={'/Home'} className="navbar-brand"><b><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>CONSTRUCTION Industry</i></h3></b></Link>
                         <div className="collapse navbar-collapse" id="navbarSupportContent">
                             <ul className="navbar-nav mr-auto">
                                 <li className="nav-item">
                                     <Link to={'/Home'} className="nav-link">&nbsp;HOME</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to={'/Services'} className="nav-link">SERVICES</Link>
+                                    <Link to={'/AuthzEmployeeHome'} className="nav-link">SERVICES</Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link to={'/SiteManagerHome'} className="nav-link">LOCATIONS</Link>
@@ -78,7 +91,7 @@ class App extends Component {
                                     <Link to={'/supervisorHome'} className="nav-link">CONTACTUS</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to={'/AboutUs'} className="nav-link">ABOUTUS</Link>
+                                    <Link to={'/SupplierHome'} className="nav-link">ABOUTUS</Link>
                                 </li>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <form className="form-inline my-2 my-lg-0">
@@ -94,11 +107,6 @@ class App extends Component {
                 </div>
                 
                     </section>
-                {this.state.clickedRequisition ? (
-                    <div className="login_style">
-                        <createRequisition handleClickInventory={this.handleClickInventory}/>
-                    </div>
-                ) : (
 
                     <Switch>
                         <Route exact path='/createRequisition' component={createRequisition}/>
@@ -114,8 +122,13 @@ class App extends Component {
                         <Route exact path='/Services' component={Services}/>
                         <Route exact path='/AboutUs' component={AboutUs}/>
                         <Route exact path='/Register' component={Register}/>
+                        <Route exact path='/CreatePurchaceOrder' component={CreatePurchaceOrder}/>
+                        <Route exact path='/PurchaseOrderDetails' component={PurchaseOrderDetails}/>
+                        <Route exact path='/ViewPurchaseOrders' component={ViewPurchaseOrder}/>
+                        <Route exact path='/AddSupplier' component={AddSupplier}/>
+                        <Route exact path='/SupplierDetails' componen={SupplierDetails}/>
                     </Switch>
-                        )};
+                    
             </Router><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
             <section style={ background }>
                         <div className="container">

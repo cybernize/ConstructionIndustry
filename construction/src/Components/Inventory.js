@@ -28,6 +28,7 @@ export default class extends Component {
 
         this.state = {
             clickedInventoryDetails: false,
+        
             products: [
                 {
                     id: 1,

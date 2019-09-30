@@ -5,6 +5,7 @@ import Background from '../Images/bg2.jpg';
 import createBrowserHistory from 'history/createBrowserHistory';
 import axios from 'axios';
 
+
 const browserHistory = createBrowserHistory();
 
 const sectionStyle = {
@@ -25,39 +26,30 @@ export default class Login extends Component{
     constructor(props){
         super(props);
         this.state = {
-            email: '',
+            username: '',
             password: '',
         };
 
-        // this.onChange = this.onChange.bind(this);
+        this.onChange = this.onChange.bind(this);
         // this.onSubmit = this.onSubmit.bind(this);
     }
 
-    // onChange(e){
-    //     this.setState({
-    //         [e.target.name]:e.target.value
-    //     })
-    // }
+    onChange(e){
+        this.setState({
+            [e.target.name]:e.target.value
+        })
+    }
 
-    // onSubmit(e){
-    //     e.preventDefault();
-
-    //     const user={
-    //         email:this.state.email,
-    //         password:this.state.password
-    //     }
-    // }
+    
     
 
     updateUsername(username) {
-        console.log(username.target.value)
         this.setState({
-           email: username.target.value
+            username: username.target.value
         });
     }
 
     updatePassword(password) {
-        console.log(password.target.value)
         this.setState({
             password: password.target.value
         });
@@ -66,30 +58,16 @@ export default class Login extends Component{
     render() {
         const loginToSystem = (e) =>{
             e.preventDefault();
-            console.log(this.state.email+" "+this.state.password)
-            axios.post('http://localhost:3003/register/user',{
-                email: this.state.email,
-                password: this.state.password
-            })
-            .then((user)=>{
-                console.log(user.data.role);
-                if(user.data.role ==='sitemanager') {
-                    browserHistory.push('/SiteManagerHome');
-                }else if(user.data.role ==='supervisor'){
-                    browserHistory.push('/supervisorHome');
-                }else if(user.data.role ==='suppiler') {
-                    browserHistory.push('/SupplierHome');
-                }else if(user.data.role ==='employee') {
-                  //  this.context.router.history.push("/AuthzEmployeeHome")
-                   return <Redirect to='/Home' />
-                }else{
-                    browserHistory.push('/AuthzEmployeeHome');
-                }
-              }).catch((err)=>{
-                console.log(err)
-              })
-
-        
+            console.log(this.state.password);
+            if(this.state.username==='sitemanager'&&this.state.password==='sitemanager') {
+                browserHistory.push('/SiteManagerHome');
+            }else if(this.state.username==='supervisor' && this.state.password==='supervisor'){
+                browserHistory.push('/supervisorHome');
+            }else if(this.state.username==='suppiler' && this.state.password==='suppiler') {
+                browserHistory.push('/SupplierHome');
+            }else if(this.state.username==='employee' && this.state.password==='employee') {
+                browserHistory.push('/AuthzEmployeeHome');
+            };
         };
         return(
 
@@ -98,7 +76,7 @@ export default class Login extends Component{
                 <section style={ sectionStyle }>
                     <div className="col-sm-20 offset-sm-1 align-content-md-center">
 
-                        <form onSubmit={this.onSubmit}>
+                        <form>
                             <div className="container">
                                 <br/>
                                 <form action="" className="was-validated ">

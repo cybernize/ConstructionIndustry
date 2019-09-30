@@ -1,13 +1,13 @@
 import React,{Component} from 'react';
 import axios from 'axios';
-import InventoryDetails from "../Images/bg2.jpg";
+import purchaseOrderDetails from "../Images/bg2.jpg";
 
 const sectionStyle = {
     width: "1080px",
     height: "550px",
     opacity: 0.7,
-    marginLeft: "54px",
-    backgroundImage: `url(${InventoryDetails})`
+    marginLeft: "204px",
+    backgroundImage: `url(${purchaseOrderDetails})`
 };
 
 const form ={
@@ -25,9 +25,8 @@ export default class extends Component{
                 itemName:'',
                 type:'',
                 quantity:'',
-                perAgreedPrice:'',
-                perApprovedSupplier:'',
-                AccountNo:''
+                total:'',
+                deliveryDate:''
             }
             this.onChange = this.onChange.bind(this);
             this.onSubmit = this.onSubmit.bind(this);   
@@ -44,28 +43,15 @@ export default class extends Component{
         console.log(Date.now());
         e.preventDefault();
 
-        axios.post('http://localhost:3003/requisitions', {
+        axios.get('http://localhost:3003/purchaseOrder', {
             siteName:this.state.siteName,
             itemName:this.state.itemName,
             type:this.state.type,
             quantity:this.state.quantity,
-            perAgreedPrice:this.state.perAgreedPrice,
-            perApprovedSupplier:this.state.perApprovedSupplier,
-            AccountNo: this.state.AccountNo,
+            total:this.state.total,
+            deliveryDate:this.state.deliveryDate,
             createdAt: Date.now()
 
-      }).then((requisitions)=>{
-        document.getElementById('sname').value = "";
-        document.getElementById('iname').value = "";
-        document.getElementById('type').value = "";
-        document.getElementById('qty').value = "";
-        document.getElementById('price').value = "";
-        document.getElementById('supplier').value = "";
-        document.getElementById('accNo').value = "";
-        alert('Requisitions have been Created Successfully')
-        console.log(requisitions)
-      }).catch((err)=>{
-        console.log(err)
       })
     }
 
@@ -81,7 +67,7 @@ export default class extends Component{
                             <br/>
                             <form action="" className="was-validated ">
                                 <section style={ form }><br/>
-                                <center><h2>REQUISITION DETAILS</h2></center>
+                                <center><h2>PURCHASE ORDER</h2></center>
                                 
                                     <div className="form-row col-sm-20 offset-sm-1 align-content-md-center">
                                         <div className="col-md-4 mb-3 col-sm-20 offset-sm-1">
@@ -108,21 +94,15 @@ export default class extends Component{
                                         </div>
 
                                         <div className="col-md-4 mb-3 col-sm-20 offset-sm-1">
-                                        <label htmlFor="details" ><b>Per Agreed Price : </b></label><br></br>
-                                        <input type="number" className="form-control" id="price" placeholder="Enter quantity" name="perAgreedPrice" 
+                                        <label htmlFor="details" ><b>Total : </b></label><br></br>
+                                        <input type="number" className="form-control" id="total" placeholder="Enter total" name="total" 
                                          onChange={event => this.onChange(event)}required/><br/>
                                         </div>
 
                                         <div className="col-md-4 mb-3 col-sm-20 offset-sm-1">
-                                        <label htmlFor="details" ><b>Per Approved Supplier : </b></label><br></br>
-                                        <input type="text" className="form-control" id="supplier" placeholder="Enter quantity" name="perApprovedSupplier" 
+                                        <label htmlFor="details" ><b>Delivery Date : </b></label><br></br>
+                                        <input type="Date" className="form-control" id="deliveryDate" placeholder="Enter Date" name="deliveryDate" 
                                          onChange={event => this.onChange(event)}required/><br/>
-                                        </div>
-
-                                        <div className = "col-sm-9 offset-sm-1 align-content-md-center">
-                                            <label htmalFor="details"><b>Funding Account No</b></label>
-                                            <input type="number" className="form-control" id="accNo" placeholder="Enter AccountNo" name="AccountNo"
-                                             onChange={event => this.onChange(event)} required/><br/>
                                         </div>
                                     </div>
                                 
@@ -131,7 +111,7 @@ export default class extends Component{
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <br/>
-                                        <button className="btn btn-primary offset-md-1" onClick={this.onSubmit}>MAKE REQUISITION</button>
+                                        <button className="btn btn-primary offset-md-1" onClick={this.onSubmit}>SEND PURCHASE ORDER</button>
                                         <button className="btn btn-secondary offset-md-1 " >Cancel</button>
                                     </div>
                                     <br/>

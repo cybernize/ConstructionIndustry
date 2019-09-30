@@ -1,13 +1,13 @@
 const express =  require('express');
 const router = express.Router();
-const Product = require('../models/product');
+const PurchaseOrder = require('../models/purchaseOrder');
 
 
 //Get all the REQUISITION Deatails
 router.get('/',async (req,res)=>{
     try{
-        const product = await Product.find();
-        res.json(product);
+        const purchase = await PurchaseOrder.find();
+        res.json(purchase);
     }catch(err){
         res.json({message:err});
     }
@@ -17,15 +17,16 @@ router.get('/',async (req,res)=>{
 // Sumbit a REQUISITION Details
 router.post('/',async (req,res)=> {
  //  console.log(req.body);
-    const productDetails = new Product({
+    const purchaseDetails = new PurchaseOrder({
         siteName:req.body.siteName,
         itemName:req.body.itemName,
-        itemPrice:req.body.itemPrice,
+        type:req.body.type,
         quantity:req.body.quantity,
-        supplierName:req.body.supplierName,
+        total:req.body.total,
+        deliveryDate:req.body.deliveryDate
     });
 
-    productDetails.save()
+    purchaseDetails.save()
     .then(data =>{
         res.json(data);
        console.log('save data to db');
@@ -40,20 +41,6 @@ router.post('/',async (req,res)=> {
     // }catch(err){
     //     res.json({message:err});
     // }
-
-    router.patch('/:productId',async(req,res) =>{
-        try{
-            const updatedPost = await Post.updateOne(
-                {_id:req.params.productId},
-                {$set :{itemName:req.body.itemName}});
-            res.json(updatedPost);
-        }catch(err){
-            res.json({message:err});
-        }
-    });
-    
 });
-
-
 
 module.exports = router;
