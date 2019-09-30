@@ -36,7 +36,9 @@ export default class extends Component{
     onSubmit(e){
         console.log(Date.now());
         e.preventDefault();
-
+        let status = 1;
+        if(this.state.tprice > 100000)
+            status = 0
         axios.post('http://localhost:3003/requisitions', {
             siteName:this.state.siteName,
             itemName:this.state.itemName,
@@ -47,7 +49,7 @@ export default class extends Component{
             tprice:this.state.tprice,
             AccountNo: this.state.AccountNo,
             createdAt: Date.now(),
-            status: 0
+            status: status
 
       }).then((requisitions)=>{
         document.getElementById('sname').value = "";
