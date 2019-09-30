@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0591e32e-8af5-4b0a-b620-fe5496a5abcd" name="Default Changelist" comment="Requisition approve decline added">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/requisition.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/requisition.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/requisitionRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/requisitionRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/construction/src/Components/ApprovedAll.js" beforeDir="false" afterPath="$PROJECT_DIR$/construction/src/Components/ApprovedAll.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/construction/src/Components/PendingRequisitions.js" beforeDir="false" afterPath="$PROJECT_DIR$/construction/src/Components/PendingRequisitions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/construction/src/Components/RequisitionDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/construction/src/Components/RequisitionDetails.js" afterDir="false" />
+    <list default="true" id="0591e32e-8af5-4b0a-b620-fe5496a5abcd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/construction/src/Components/CreatePurchaceOrder.js" beforeDir="false" afterPath="$PROJECT_DIR$/construction/src/Components/CreatePurchaceOrder.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569859307663</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="requisitions approve decline added">
+      <created>1569861629371</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1569861629371</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,7 +144,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Requisition delete function fixed" />
     <MESSAGE value="Requisition approve decline added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Requisition approve decline added" />
+    <MESSAGE value="requisitions approve decline added" />
+    <option name="LAST_COMMIT_MESSAGE" value="requisitions approve decline added" />
   </component>
   <component name="masterDetails">
     <states>

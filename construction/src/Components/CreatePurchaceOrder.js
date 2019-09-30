@@ -4,6 +4,7 @@ import {NavLink} from "react-router-dom";
 import {Link,Redirect } from "react-router-dom";
 import'../css/siteManager.css';
 import PurchaseOrderDetails from './purchaseOrderDetails';
+import axios from "axios";
 
 const siteManager1 ={
     paddingLeft: "40px",
@@ -15,8 +16,17 @@ export default class extends Component{
         super(props);
         this.state ={
             clickedPurchaseOrder : false,
+            requisitions: []
         }
         this.handleClickedPurchaseOrder = this.handleClickedPurchaseOrder.bind(this);
+    }
+
+    componentDidMount() {
+        axios.get('http://localhost:3003/requisitions/isApproved')
+            .then(res =>{
+                console.log(res);
+                this.setState({requisitions:res.data})
+            })
     }
 
     handleClickedPurchaseOrder(){
@@ -68,18 +78,18 @@ export default class extends Component{
                                                         <th>Funding AccNo</th>
                                                         <th></th>
                                                     </tr></thead>
-                                                    <tbody>
-                                                        <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
+                                                    <tbody>{this.state.requisitions.map((q) =>
+                                                    <tr>
+                                                        <td>{q.siteName}</td>
+                                                        <td>{q.itemName}</td>
+                                                        <td>{q.type}</td>
+                                                        <td>{q.quantity}</td>
+                                                        <td>{q.perAgreedPrice}</td>
+                                                        <td>{q.perApprovedSupplier}</td>
+                                                        <td>{q.AccountNo}</td>
                                                         <td>
                                                         <button className="btn btn-success col-sm-20 offset-sm-0" onClick={this.handleClickedPurchaseOrder}>CREATE PURCHASE ORDER</button></td>
-                                                    </tr></tbody>
+                                                    </tr>)}</tbody>
                                                     </table>
                                         </div>
                                 </div></form>

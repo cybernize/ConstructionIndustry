@@ -34,6 +34,16 @@ router.get('/isApproved',async (req,res)=>{
 
 });
 
+router.get('/isDecline',async (req,res)=>{
+    try{
+        const requisition = await Requisition.find({status: 2});
+        res.json(requisition);
+    }catch(err){
+        res.json({message:err});
+    }
+
+});
+
 // Sumbit a REQUISITION Details
 router.post('/',async (req,res)=> {
  //  console.log(req.body);
