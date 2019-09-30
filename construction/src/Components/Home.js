@@ -7,8 +7,7 @@ import  slide3 from '../Images/construction.png';
 import emergency from '../Images/emergency.jpg';
 import design from '../Images/design.jpg';
 import sustanability from '../Images/sustanability.jpg';
-import Login from "./Login";
-import Register from "./Register";
+import {Link,Redirect } from "react-router-dom";
 
 const btnSectionStyle = {
     paddingLeft:"200px",
@@ -24,55 +23,19 @@ const form ={
 };
 
 export default class extends Component{
-    constructor(props) {
-        super(props);
 
-        this.state = {
-            clickedLogin: false,
-            clickedRegister:false,
-        };
-
-
-        this.handleClickedLogin = this.handleClickedLogin.bind(this);
-        this.handleClickedRegister = this.handleClickedRegister.bind(this);
-    }
-
-    handleClickedRegister(){
-        this.setState({
-            clickedRegister: !this.state.clickedRegister,
-        });
-    }
-
-    handleClickedLogin() {
-        this.setState({
-            clickedLogin: !this.state.clickedLogin,
-        });
-    }
 
 
     render() {
         return(
-            <div>
-                    {this.state.clickedLogin ? (
-                        <div className="container">
-                            <Login/>
-                        </div>
-                    ):(
-                        <div>
-                        {this.state.clickedRegister?(
-                            <div className="container">
-                                <Register/>
-                                </div>
-                        ):(
-                    
-            <div>
-                <section style={ btnSectionStyle }><br/>
-                    <h4>With us you don’t need to guess, <b>our work will be sure to impress !</b>&nbsp;&nbsp;
-                    <button className="btn btn-outline-danger col-sm-20 offset-sm-1 align-content-md-center" type="submit"
-                        onClick={this.handleClickedRegister}>SIGN IN</button>
-                    <button className="btn btn-outline-danger col-sm-20 offset-sm-1 align-content-md-center" type="submit"
-                        onClick={this.handleClickedLogin}>LOG IN</button></h4>
-                </section><br/>
+            <div><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <Link to={'/SiteManagerHome'}><button className="btn btn-outline-dark col-sm-20 offset-sm-1">Site Manager</button></Link>
+            <Link to={'/SupervisorHome'}><button className="btn btn-outline-success col-sm-20 offset-sm-1">Supervisor</button></Link>
+            <Link to={'/SupplierHome'}><button className="btn btn-outline-primary col-sm-20 offset-sm-1">Supplier</button></Link>
+            <Link to={'/AuthzEmployeeHome'}><button className="btn btn-outline-warning col-sm-20 offset-sm-1">Authz Employee</button></Link>
+            <Link to={'/Inventory'}><button className="btn btn-outline-danger col-sm-20 offset-sm-1">Inventory</button></Link><br/><br/>
+   
             <MDBContainer>
                 <MDBCarousel
                     activeItem={1}
@@ -162,7 +125,7 @@ export default class extends Component{
                  wood trim work, doors, frames, locks, and pallet racking systems. For work not completed in-house, we have an extensive list of
                  qualified contractors.</p>
                  </div>
-                 </div>)}</div>)}
+                 
                             </div>
                  
                 

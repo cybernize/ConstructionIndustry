@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import construction from "../Images/construction.png";
 import '../css/supplier.css';
-import {NavLink} from "react-router-dom";
+import {Link,NavLink} from "react-router-dom";
 import supplierPic from '../Images/supplier.jpeg';
 import SupplierDetails from './SupplierDetails';
 
@@ -53,11 +53,10 @@ export default class extends Component{
                     </section>
                     <br/><br/>
                     <NavLink to={'/SupplierHome'}>HOME</NavLink><br/>
-                    <a href="#">SHOW REQUISIONS</a><br/>
+                    <NavLink to={'/ViewRequisitions'}>SHOW REQUISIONS</NavLink><br/>
                     <a href="#">NEW ALERTS</a><br/>
 
-                    <button className="btn btn-outline-danger col-sm-20 offset-sm-1 align-content-md-center" type="submit"
-                            onClick={this.handleClickDashboard}>LOG OUT </button>
+                    <Link to={'/Home'}><button className="btn btn-outline-danger col-sm-20 offset-sm-1 align-content-md-center" type="submit">LOG OUT </button></Link>
 
                 </div>
 

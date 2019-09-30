@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import '../css/supplier.css';
 import supplierHome from '../Images/supplierHome.jpg';
 import supplierPic from '../Images/supplier.jpeg';
-import {NavLink} from "react-router-dom";
+import {Link,NavLink} from "react-router-dom";
 
 const supplier ={
     paddingLeft: "40px",
@@ -25,8 +25,7 @@ export default class extends Component{
                     <a href="#">SHOW REQUISIONS</a><br/>
                     <NavLink to={'/AddSupplier'}>ADD SUPPLIERS</NavLink><br/>
                 
-                    <button className="btn btn-outline-danger col-sm-20 offset-sm-1 align-content-md-center" type="submit"
-                            onClick={this.handleClickDashboard}>LOG OUT </button>
+                    <Link to={'/Home'}><button className="btn btn-outline-danger col-sm-20 offset-sm-1 align-content-md-center" type="submit">LOG OUT </button></Link>
 
                 </div>
                 <div className="main">

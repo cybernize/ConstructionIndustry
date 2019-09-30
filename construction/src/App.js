@@ -20,6 +20,7 @@ import PurchaseOrderDetails from './Components/purchaseOrderDetails';
 import ViewPurchaseOrder from './Components/ViewPurchaseOrder';
 import AddSupplier from './Components/AddSupplier';
 import SupplierDetails from './Components/SupplierDetails';
+import ViewRequisitions from './Components/ViewRequisitions';
 
 
 const background = {
@@ -82,23 +83,24 @@ class App extends Component {
                                     <Link to={'/Home'} className="nav-link">&nbsp;HOME</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to={'/AuthzEmployeeHome'} className="nav-link">SERVICES</Link>
+                                    <Link to={'/Services'} className="nav-link">SERVICES</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to={'/SiteManagerHome'} className="nav-link">LOCATIONS</Link>
+                                    <Link to={'/Location'} className="nav-link">LOCATIONS</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to={'/supervisorHome'} className="nav-link">CONTACTUS</Link>
+                                    <Link to={'/'} className="nav-link">CONTACTUS</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to={'/SupplierHome'} className="nav-link">ABOUTUS</Link>
+                                    <Link to={'/AboutUs'} className="nav-link">ABOUTUS</Link>
                                 </li>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <form className="form-inline my-2 my-lg-0">
                                     <input className="form-control rgba-mdb-color-light mr-sm-0" type="search" placeholder="Search" aria-label="Search"></input>
                                 </form>
                                 &nbsp;&nbsp;
-                                <button className="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+                                {/* <button className="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button> */}
+                                <Link to={'/Login'}>< button className="btn btn-outline-danger my-2 my-sm-0" type="submit">Login</button></Link>
 
                             </ul>
                         </div>
@@ -124,9 +126,10 @@ class App extends Component {
                         <Route exact path='/Register' component={Register}/>
                         <Route exact path='/CreatePurchaceOrder' component={CreatePurchaceOrder}/>
                         <Route exact path='/PurchaseOrderDetails' component={PurchaseOrderDetails}/>
-                        <Route exact path='/ViewPurchaseOrders' component={ViewPurchaseOrder}/>
+                        <Route exact path='/ViewPurchaseOrder' component={ViewPurchaseOrder}/>
                         <Route exact path='/AddSupplier' component={AddSupplier}/>
-                        <Route exact path='/SupplierDetails' componen={SupplierDetails}/>
+                        <Route exact path='/SupplierDetails' component={SupplierDetails}/>
+                        <Route exact path='/ViewRequisitions' component={ViewRequisitions}/>
                     </Switch>
                     
             </Router><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>

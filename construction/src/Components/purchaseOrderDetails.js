@@ -1,14 +1,5 @@
 import React,{Component} from 'react';
 import axios from 'axios';
-import purchaseOrderDetails from "../Images/bg2.jpg";
-
-const sectionStyle = {
-    width: "1080px",
-    height: "550px",
-    opacity: 0.7,
-    marginLeft: "204px",
-    backgroundImage: `url(${purchaseOrderDetails})`
-};
 
 const form ={
     width: "750px", /* Full width */
@@ -71,11 +62,10 @@ export default class extends Component{
     render() {
     return(
         <div>
-            <section style={ sectionStyle }>
+                 <div className="container">
                 <div className="col-sm-20 offset-sm-1 align-content-md-center">
 
-                    <form>
-                        <div className="container">
+                    <form></form>
                             <br/>
                             <form action="" className="was-validated ">
                                 <section style={ form }><br/>
@@ -130,14 +120,8 @@ export default class extends Component{
                                 </section>
                             </form>
                         </div>
-
-                    </form>
-                    <br/>
-
                 </div>
-            </section>
-        </div>
-
+            </div>
     )
 }
 

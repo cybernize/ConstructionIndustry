@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import axios from 'axios';
 import SupplierDetails from "../Images/bg2.jpg";
-import {NavLink} from "react-router-dom";
+import {Link,NavLink} from "react-router-dom";
 
 
 const sectionStyle = {
@@ -126,7 +126,8 @@ export default class extends Component{
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <br/>
                                         <button className="btn btn-primary offset-md-1" onClick={this.onSubmit}>ADD SUPPLIERS</button>
-                                        <button className="btn btn-secondary offset-md-1 " >Cancel</button>
+                                        <Link to={'/SupplierHome'}><button className="btn btn-dark offset-md-1" >Cancel</button></Link>>
+                                        
                                     </div>
                                     <br/>
                                 </section>

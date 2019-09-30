@@ -1,14 +1,6 @@
 import React,{Component} from 'react';
 import axios from 'axios';
-import InventoryDetails from "../Images/bg2.jpg";
-
-const sectionStyle = {
-    width: "1080px",
-    height: "550px",
-    opacity: 0.7,
-    marginLeft: "54px",
-    backgroundImage: `url(${InventoryDetails})`
-};
+import {Link,Redirect } from "react-router-dom";
 
 const form ={
     width: "750px", /* Full width */
@@ -73,12 +65,9 @@ export default class extends Component{
     render() {
     return(
         <div>
-            <section style={ sectionStyle }>
                 <div className="col-sm-20 offset-sm-1 align-content-md-center">
-
                     <form>
                         <div className="container">
-                            <br/>
                             <form action="" className="was-validated ">
                                 <section style={ form }><br/>
                                 <center><h2>REQUISITION DETAILS</h2></center>
@@ -108,15 +97,15 @@ export default class extends Component{
                                         </div>
 
                                         <div className="col-md-4 mb-3 col-sm-20 offset-sm-1">
-                                        <label htmlFor="details" ><b>Per Agreed Price : </b></label><br></br>
-                                        <input type="number" className="form-control" id="price" placeholder="Enter quantity" name="perAgreedPrice" 
+                                        <label htmlFor="details" ><b>PerAgreed Price : </b></label><br></br>
+                                        <input type="number" className="form-control" id="price" placeholder="Enter price" name="perAgreedPrice" 
                                          onChange={event => this.onChange(event)}required/><br/>
                                         </div>
 
-                                        <div className="col-md-4 mb-3 col-sm-20 offset-sm-1">
-                                        <label htmlFor="details" ><b>Per Approved Supplier : </b></label><br></br>
-                                        <input type="text" className="form-control" id="supplier" placeholder="Enter quantity" name="perApprovedSupplier" 
-                                         onChange={event => this.onChange(event)}required/><br/>
+                                        <div className = "col-md-4 mb-3 col-sm-20 offset-sm-1">
+                                            <label htmalFor="details"><b>PerApproved supplier Name :</b></label>
+                                            <input type="text" className="form-control" id="supplier" placeholder="Enter supplier" name="supplier"
+                                             onChange={event => this.onChange(event)} required/><br/>
                                         </div>
 
                                         <div className = "col-sm-9 offset-sm-1 align-content-md-center">
@@ -132,7 +121,7 @@ export default class extends Component{
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <br/>
                                         <button className="btn btn-primary offset-md-1" onClick={this.onSubmit}>MAKE REQUISITION</button>
-                                        <button className="btn btn-secondary offset-md-1 " >Cancel</button>
+                                        <Link to={'/AuthzEmployeeHome'}><button className="btn btn-dark offset-md-1 " >Cancel</button></Link>
                                     </div>
                                     <br/>
                                 </section>
@@ -143,7 +132,6 @@ export default class extends Component{
                     <br/>
 
                 </div>
-            </section>
         </div>
 
     )

@@ -3,6 +3,7 @@ import '../css/siteManager.css';
 import siteManagerHome from '../Images/siteManagerHome.jpg';
 import siteManager from '../Images/siteManager.jpg';
 import {NavLink} from "react-router-dom";
+import {Link,Redirect } from "react-router-dom";
 
 const siteManager1 ={
     paddingLeft: "40px",
@@ -20,17 +21,14 @@ export default class extends Component{
                         <img src={siteManager} width="150px" height="160px"/><br/><br/>
                         <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Site Manager</h6>
                     </section>
-                    <br/><br/>
+                    <br/>
                     <NavLink to={'/SiteManagerHome'}>HOME</NavLink><br/>
                     <NavLink to={'/ViewPurchaseOrder'}>VIEW PURCHACE ORDER</NavLink><br/>
                     <a href="#">SEARCH PURCHASE ORDERS</a><br/>
                     <NavLink to={'/CreatePurchaceOrder'}>APPROVAL REQUISITIONS</NavLink><br/>
                     <a href="#">INVENTORY DETAILS</a><br/>
-                    {/*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/}
-                    {/*<button><NavLink to={'/Home'}/>LOG OUT</button>*/}
-                    <button className="btn btn-outline-danger col-sm-20 offset-sm-1 align-content-md-center" type="submit"
-                            onClick={this.handleClickDashboard}>LOG OUT </button>
-
+                  
+                    <Link to={'/Home'}><button className="btn btn-outline-danger col-sm-20 offset-sm-1 align-content-md-center" type="submit">LOG OUT </button></Link>
                 </div>
                 <div className="main">
                     <h2> Home Page </h2>

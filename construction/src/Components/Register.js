@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import Background from '../Images/bg2.jpg';
 import createBrowserHistory from 'history/createBrowserHistory';
 import axios from 'axios'
+import {Link,Redirect } from "react-router-dom";
 
 const browserHistory = createBrowserHistory();
 
@@ -65,6 +66,7 @@ export default class Register extends Component{
        
         return(
 
+            <div className="container">
             <div style={{marginTop: 10}}>
                 <br/>
                 <section style={ sectionStyle }>
@@ -130,14 +132,14 @@ export default class Register extends Component{
                                 </div>
                         </div>
                     </div>
-                     <button className="btn btn-primary col-sm-20 offset-sm-1 align-content-md-center" type="submit" onClick={this.onSubmit}>REGISTER</button>
-                        <button className="btn btn-primary col-sm-20 offset-sm-1 align-content-md-center" type="submit" >BACK</button>
+                     <button className="btn btn-danger col-sm-20 offset-sm-1 align-content-md-center" type="submit" onClick={this.onSubmit}>Register</button>
+                     <Link to={'/Home'}><button className="btn btn-outline-dark col-sm-20 offset-sm-1 align-content-md-center" type="submit" >Back</button></Link>
                         <br/><br/>
                             </section>
                         </div>
                 </section>
             </div>
-        
+            </div>
 
         );
     }
