@@ -64,7 +64,7 @@ export default class createRequisition extends Component{
                     <NavLink to={'/AuthzEmployeeHome'}>HOME</NavLink><br/>
                     <NavLink to={'/ViewRequisitions'}>SHOW REQUISIONS</NavLink><br/>
                     <NavLink to={'/createRequisition'}>CREATE RQUISITIONS</NavLink><br/>
-                    <a href="#">SERVICES</a><br/>
+                    <NavLink to={'/DeclineRequisitions'}>DISAPPROVED REQUISIONS</NavLink><br/>
 
                     <Link to={'/Home'}><button className="btn btn-outline-danger col-sm-20 offset-sm-1 align-content-md-center" type="submit">LOG OUT </button></Link>
                 </div>

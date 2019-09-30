@@ -21,6 +21,8 @@ import ViewPurchaseOrder from './Components/ViewPurchaseOrder';
 import AddSupplier from './Components/AddSupplier';
 import SupplierDetails from './Components/SupplierDetails';
 import ViewRequisitions from './Components/ViewRequisitions';
+import PendingRequisitions from './Components/PendingRequisitions';
+import DeclineRequisitions from './Components/DeclineRequisitions';
 
 
 const background = {
@@ -35,38 +37,6 @@ const backgroundNav = {
 
 
 class App extends Component {
-
-    // constructor(props) {
-    //     super(props);
-
-    //     this.state = {
-    //         clickedRequisition: false,
-    //         clickedInventory: false,
-    //         clickedPurchaseOrder:false,
-    //     };
-
-    //     this.handleClickRequisition = this.handleClickRequisition.bind(this);
-    //     this.handleClickInventory = this.handleClickInventory.bind(this);
-    //     this.handleClickedPurchaseOrder = this.handleClickedPurchaseOrder.bind(this);
-
-    // }
-    // handleClickedPurchaseOrder(){
-    //     this.setState({
-    //         clickedPurchaseOrder:!this.state.clickedPurchaseOrder
-    //     })
-    // }
-
-    // handleClickRequisition() {
-    //     this.setState({
-    //         clickedRequisition: !this.state.clickedRequisition,
-    //     });
-    // }
-
-    // handleClickInventory() {
-    //     this.setState({
-    //         clickedInventory: !this.state.clickedInventory,
-    //     });
-    // }
 
     render() {
         return (
@@ -130,6 +100,8 @@ class App extends Component {
                         <Route exact path='/AddSupplier' component={AddSupplier}/>
                         <Route exact path='/SupplierDetails' component={SupplierDetails}/>
                         <Route exact path='/ViewRequisitions' component={ViewRequisitions}/>
+                        <Route exact path='/PendingRequisitions' component={PendingRequisitions}/>
+                        <Route exact path='/DeclineRequisitions' component={DeclineRequisitions}/>
                     </Switch>
                     
             </Router><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>

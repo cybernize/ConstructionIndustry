@@ -14,8 +14,8 @@ export default class extends Component {
 
         render(){
             return(
-
-                <div className="container">
+                
+                <div className="container"><br/>
                     <section style={background}><br/>
                     <br/><br/>
                     <h3>OFFICIES</h3><br/>

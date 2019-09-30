@@ -2,17 +2,7 @@ import React, {Component} from 'react';
 import '../css/authzEmployee.css';
 import {Link,NavLink} from "react-router-dom";
 import auzEmployee from '../Images/auzEmployee.jpg';
-import axios from 'axios';
 
-// const sectionStyle = {
-//     width: "1080px",
-//     height: "500px",
-//     opacity: 0.80,
-//     paddingRight:"303px",
-//     paddingLeft:"200px",
-//     marginLeft: "54px",
-//     backgroundImage: `url(${construction})`
-// };
 const authzEmployee1 ={
     paddingLeft: "40px",
     paddingRight:"40px"
@@ -25,46 +15,7 @@ const form ={
     border: "opx black",
 };
 
-export default class ViewRequisitions extends Component{
-
-    state={
-        requisitions:[],
-    };
-
-    componentDidMount(){
-        axios.get('http://localhost:3003/requisitions')
-        .then(res =>{
-            console.log(res);
-            this.setState({requisitions:res.data})
-        })
-           
-    }
-    deleteOnSubmit(requisitionId){
-       // e.preventDefault();
-        axios.delete('http://localhost:3003/requisitions'+requisitionId._id)
-        .then(res=>{
-            console.log(res.data);
-            //this.setState({requisitions:res.data});
-        })
-        alert('Are you sure want to Delete !!!')
-    }
-   
-    // onCkickDelete(q){
-    //     axios.post('http://localhost:3003/requisitions'+q._id)
-    //     .then(response => {
-    //         axios.get('http://localhost:3003/requisitions')
-    //         .then(data => {
-    //             console.log(data)
-    //             this.setState({
-    //                 data: data.data
-    //             })
-        
-    //         })
-    //     })
-    //     .catch(err => {
-    //         console.log(err)
-    //     })
-    // }
+export default class DeclineRequisitions extends Component{
 
     render(){
         return(
@@ -92,7 +43,7 @@ export default class ViewRequisitions extends Component{
                                         <label className="form-check-label">
                                             <div className="font-weight-danger align-content-md-center">
                                             <h2><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                ALL REQUISITION LISTS</b></h2></div><br/>
+                                                DISAPPROVED REQUISITION LISTS</b></h2></div><br/>
                                         </label>
                                         <br/><div>
                                             <table border='2' cellSpacing='1' cellPadding='4'>
@@ -106,18 +57,17 @@ export default class ViewRequisitions extends Component{
                                                         <th>Funding AccNo</th>
                                                         <th>Actions</th>
                                                     </tr></thead>
-                                                    <tbody>{this.state.requisitions.map((q) => 
+                                                    <tbody>
                                                         <tr>
-                                                        <td>{q.siteName}</td>
-                                                        <td>{q.itemName}</td>
-                                                        <td>{q.type}</td>
-                                                        <td>{q.quantity}</td>
-                                                        <td>{q.perAgreedPrice}</td>
-                                                        <td>{q.perApprovedSupplier}</td>
-                                                        <td>{q.AccountNo}</td>
-                                                        <td><button className="btn btn-success col-sm-20 offset-sm-0">Update</button>&nbsp;
-                                                        <button className="btn btn-danger col-sm-20 offset-sm-0"onClick={()=>{this.deleteOnSubmit()}}>Delete</button></td>
-                                                    </tr>)}</tbody>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>DISAPPROVED</td>
+                                                    </tr></tbody>
                                                     </table>
                                         </div><br/><br/>
                                 </div></form>

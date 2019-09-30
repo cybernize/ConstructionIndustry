@@ -45,4 +45,14 @@ router.post('/',async (req,res)=> {
     // }
 });
 
+router.delete('/:requisitionId',async(req,res)=>{
+    try{
+        const removed = await Post.remove({_id:req.params.requisitionId});
+        res.json(removed);
+    }catch(err){
+        res.json({message:err});
+    }
+});
+
+
 module.exports = router;

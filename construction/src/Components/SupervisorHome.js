@@ -25,8 +25,8 @@ export default class extends Component{
                 <br/>
                 <NavLink to={'/SupervisorHome'}>HOME</NavLink><br/>
                 <a href="#">APPROVED ALL REQUISIONS</a><br/>
-                <a href="#">DISAPPROVED LIST</a><br/>
-                <a href="#">PENDING REQUISITIONS</a><br/>
+                {/* <NavLink to={'/DeclineRequisitions'}>DISAPPROVED REQUISIONS</NavLink><br/> */}
+                <NavLink to={'/PendingRequisitions'}>PENDING REQUISITIONS</NavLink><br/>
                 
                 <Link to={'/Home'}><button className="btn btn-outline-danger col-sm-20 offset-sm-1 align-content-md-center" type="submit">LOG OUT </button></Link>
             </div>
