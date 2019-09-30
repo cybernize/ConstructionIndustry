@@ -14,9 +14,19 @@ router.get('/',async (req,res)=>{
    
 });
 
-router.get('/toBeApproved',async (req,res)=>{
+router.get('/toBeApprovedSup',async (req,res)=>{
     try{
-        const requisition = await Requisition.find({status: 0});
+        const requisition = await Requisition.find({$and:[{status: 0},{tprice: {$lte :100000}}]});
+        res.json(requisition);
+    }catch(err){
+        res.json({message:err});
+    }
+
+});
+
+router.get('/toBeApprovedSite',async (req,res)=>{
+    try{
+        const requisition = await Requisition.find({$and:[{status: 0},{tprice: {$mt :100000}}]});
         res.json(requisition);
     }catch(err){
         res.json({message:err});

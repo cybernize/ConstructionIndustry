@@ -16,7 +16,7 @@ export default class PendingRequisitions extends Component{
     };
 
     componentDidMount(){
-        axios.get('http://localhost:3003/requisitions/toBeApproved')
+        axios.get('http://localhost:3003/requisitions/toBeApprovedSup')
         .then(res =>{
             console.log(res)
             this.setState({requisitions:res.data})
@@ -28,7 +28,7 @@ export default class PendingRequisitions extends Component{
         axios.get('http://localhost:3003/requisitions/changeStatusDecline/'+id)
         .then(res=>{
             console.log(res)
-            axios.get('http://localhost:3003/requisitions/toBeApproved')
+            axios.get('http://localhost:3003/requisitions/toBeApprovedSup')
                 .then(res =>{
                     this.setState({requisitions:res.data})
                 })
@@ -39,7 +39,7 @@ export default class PendingRequisitions extends Component{
         axios.get('http://localhost:3003/requisitions/changeStatusApprove/'+id)
             .then(res=>{
                 console.log(res)
-                axios.get('http://localhost:3003/requisitions/toBeApproved')
+                axios.get('http://localhost:3003/requisitions/toBeApprovedSup')
                     .then(res =>{
                         this.setState({requisitions:res.data})
                     })
