@@ -39,14 +39,16 @@ export default class ViewRequisitions extends Component{
         })
            
     }
-    deleteOnSubmit(){
-       // e.preventDefault();
-        axios.delete('http://localhost:3003/requisitions:_id')
+    deleteOnSubmit(e,id){
+       e.preventDefault();
+        axios.delete('http://localhost:3003/requisitions/'+id)
         .then(res=>{
-            console.log(res.data);
-            
+            console.log(res);
+            axios.get('http://localhost:3003/requisitions')
+                .then(res =>{
+                    this.setState({requisitions:res.data})
+                })
         })
-        alert('Are you sure want to Delete !!!')
     }
    
     // onCkickDelete(q){
@@ -116,7 +118,7 @@ export default class ViewRequisitions extends Component{
                                                         <td>{q.perApprovedSupplier}</td>
                                                         <td>{q.AccountNo}</td>
                                                         <td><button className="btn btn-success col-sm-20 offset-sm-0">Update</button>&nbsp;
-                                                        <button className="btn btn-danger col-sm-20 offset-sm-0"onClick={this.deleteOnSubmit}>Delete</button></td>
+                                                        <button className="btn btn-danger col-sm-20 offset-sm-0"onClick={(e) => this.deleteOnSubmit(e,q._id)}>Delete</button></td>
                                                     </tr>)}</tbody>
                                                     </table>
                                         </div><br/><br/>
