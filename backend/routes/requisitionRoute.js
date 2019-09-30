@@ -54,6 +54,7 @@ router.post('/',async (req,res)=> {
         quantity:req.body.quantity,
         perAgreedPrice:req.body.perAgreedPrice,
         perApprovedSupplier:req.body.perApprovedSupplier,
+        tprice:req.body.tprice,
         AccountNo:req.body.AccountNo,
         createdAt:req.body.createdAt,
         status: req.body.status

@@ -105,6 +105,7 @@ export default class ViewRequisitions extends Component{
                                                         <th>Quantity</th>
                                                         <th>PerAgreed Price</th>
                                                         <th>PerApproved Supplier</th>
+                                                        <th>Total Price</th>
                                                         <th>Funding AccNo</th>
                                                         <th>Actions</th>
                                                     </tr></thead>
@@ -116,6 +117,7 @@ export default class ViewRequisitions extends Component{
                                                         <td>{q.quantity}</td>
                                                         <td>{q.perAgreedPrice}</td>
                                                         <td>{q.perApprovedSupplier}</td>
+                                                        <td>{q.tprice}</td>
                                                         <td>{q.AccountNo}</td>
                                                         <td><button className="btn btn-success col-sm-20 offset-sm-0">Update</button>&nbsp;
                                                         <button className="btn btn-danger col-sm-20 offset-sm-0"onClick={(e) => this.deleteOnSubmit(e,q._id)}>Delete</button></td>

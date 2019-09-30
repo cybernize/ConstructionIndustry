@@ -74,6 +74,7 @@ export default class ApprovedAll extends Component{
                                                         <td>{q.perAgreedPrice}</td>
                                                         <td>{q.perApprovedSupplier}</td>
                                                         <td>{q.AccountNo}</td>
+                                                        <td>Approved OK</td>
                                                     </tr>)}</tbody>
                                                     </table>
                                         </div><br/><br/>

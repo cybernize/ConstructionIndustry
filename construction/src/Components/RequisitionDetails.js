@@ -19,6 +19,7 @@ export default class extends Component{
                 quantity:'',
                 perAgreedPrice:'',
                 perApprovedSupplier:'',
+                tprice:'',
                 AccountNo:''
             }
             this.onChange = this.onChange.bind(this);
@@ -43,6 +44,7 @@ export default class extends Component{
             quantity:this.state.quantity,
             perAgreedPrice:this.state.perAgreedPrice,
             perApprovedSupplier:this.state.perApprovedSupplier,
+            tprice:this.state.tprice,
             AccountNo: this.state.AccountNo,
             createdAt: Date.now(),
             status: 0
@@ -54,6 +56,7 @@ export default class extends Component{
         document.getElementById('qty').value = "";
         document.getElementById('price').value = "";
         document.getElementById('supplier').value = "";
+        document.getElementById('tprice').value="";
         document.getElementById('accNo').value = "";
         alert('Requisitions have been Created Successfully')
         console.log(requisitions)
@@ -107,6 +110,12 @@ export default class extends Component{
                                             <label htmalFor="details"><b>PerApproved supplier Name :</b></label>
                                             <input type="text" className="form-control" id="supplier" placeholder="Enter supplier" name="perApprovedSupplier"
                                              onChange={event => this.onChange(event)} required/><br/>
+                                        </div>
+
+                                        <div className="col-md-4 mb-3 col-sm-20 offset-sm-1">
+                                        <label htmlFor="details" ><b>Total Price : </b></label><br></br>
+                                        <input type="number" className="form-control" id="tprice" placeholder="Enter price" name="tprice" 
+                                         onChange={event => this.onChange(event)}required/><br/>
                                         </div>
 
                                         <div className = "col-sm-9 offset-sm-1 align-content-md-center">

@@ -32,6 +32,10 @@ const requisitionSchema = mongoose.Schema({
         type:String,
         required:true
     },
+    tprice:{
+        type:Number,
+        required:true
+    },
     AccountNo:{
         type:String,
         required:true
