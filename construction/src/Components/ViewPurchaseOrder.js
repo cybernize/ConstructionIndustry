@@ -24,6 +24,10 @@ export default class ViewPurchaseOrder extends Component{
         })
            
     }
+
+    deleteOnSubmit(){
+        
+    }
    
     render(){
         return(

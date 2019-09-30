@@ -119,7 +119,7 @@ export default class ViewRequisitions extends Component{
                                                         <td>{q.perApprovedSupplier}</td>
                                                         <td>{q.tprice}</td>
                                                         <td>{q.AccountNo}</td>
-                                                        <td><button className="btn btn-success col-sm-20 offset-sm-0">Update</button>&nbsp;
+                                                        <td><Link to={'/UpdateRequisition'}><button className="btn btn-success col-sm-20 offset-sm-0">Update</button></Link>&nbsp;
                                                         <button className="btn btn-danger col-sm-20 offset-sm-0"onClick={(e) => this.deleteOnSubmit(e,q._id)}>Delete</button></td>
                                                     </tr>)}</tbody>
                                                     </table>

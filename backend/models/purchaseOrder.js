@@ -31,6 +31,10 @@ const purchaseOrderSchema = mongoose.Schema({
     deliveryDate:{
         type:Date,
         required:true
+    },
+    status:{
+        type: Number,
+        required:true
     }
 });
 

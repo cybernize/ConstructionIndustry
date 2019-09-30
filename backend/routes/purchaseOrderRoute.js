@@ -3,7 +3,7 @@ const router = express.Router();
 const PurchaseOrder = require('../models/purchaseOrder');
 
 
-//Get all the REQUISITION Deatails
+//Get all the PURCHASE ORDER Deatails
 router.get('/',async (req,res)=>{
     try{
         const purchase = await PurchaseOrder.find();
@@ -14,7 +14,7 @@ router.get('/',async (req,res)=>{
    
 });
 
-// Sumbit a REQUISITION Details
+// Sumbit a PURCHASE ORDER Details
 router.post('/',async (req,res)=> {
  //  console.log(req.body);
     const purchaseDetails = new PurchaseOrder({
@@ -34,13 +34,17 @@ router.post('/',async (req,res)=> {
     .catch(err=> {
         res.json({message:err});
     })
+});
 
-    // try{
-    //     const savedDetails = await regDetails.save();
-    //     res.json(savedDetails);
-    // }catch(err){
-    //     res.json({message:err});
-    // }
+
+router.delete('/:purchaseId',(req,res)=>{
+    PurchaseOrder.remove({_id:req.params.purchaseId})
+        .then(res =>{
+            res.json(res)
+        })
+        .catch(err => {
+            res.json(err)
+        })
 });
 
 module.exports = router;
