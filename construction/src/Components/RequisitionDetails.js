@@ -104,7 +104,7 @@ export default class extends Component{
 
                                         <div className = "col-md-4 mb-3 col-sm-20 offset-sm-1">
                                             <label htmalFor="details"><b>PerApproved supplier Name :</b></label>
-                                            <input type="text" className="form-control" id="supplier" placeholder="Enter supplier" name="supplier"
+                                            <input type="text" className="form-control" id="supplier" placeholder="Enter supplier" name="perApprovedSupplier"
                                              onChange={event => this.onChange(event)} required/><br/>
                                         </div>
 

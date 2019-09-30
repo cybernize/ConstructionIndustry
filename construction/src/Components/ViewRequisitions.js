@@ -44,7 +44,7 @@ export default class ViewRequisitions extends Component{
         axios.delete('http://localhost:3003/requisitions:_id')
         .then(res=>{
             console.log(res.data);
-            //this.setState({requisitions:res.data});
+            
         })
         alert('Are you sure want to Delete !!!')
     }
@@ -116,7 +116,7 @@ export default class ViewRequisitions extends Component{
                                                         <td>{q.perApprovedSupplier}</td>
                                                         <td>{q.AccountNo}</td>
                                                         <td><button className="btn btn-success col-sm-20 offset-sm-0">Update</button>&nbsp;
-                                                        <button className="btn btn-danger col-sm-20 offset-sm-0"onClick={()=>{this.deleteOnSubmit()}}>Delete</button></td>
+                                                        <button className="btn btn-danger col-sm-20 offset-sm-0"onClick={this.deleteOnSubmit}>Delete</button></td>
                                                     </tr>)}</tbody>
                                                     </table>
                                         </div><br/><br/>
