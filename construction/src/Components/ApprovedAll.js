@@ -16,39 +16,14 @@ export default class ApprovedAll extends Component{
     };
 
     componentDidMount(){
-        axios.get('http://localhost:3003/requisitions')
+        axios.get('http://localhost:3003/requisitions/isApproved')
         .then(res =>{
             console.log(res);
             this.setState({requisitions:res.data})
         })
            
     }
-    deleteOnSubmit(requisitionId){
-       // e.preventDefault();
-        axios.delete('http://localhost:3003/requisitions'+requisitionId._id)
-        .then(res=>{
-            console.log(res.data);
-            //this.setState({requisitions:res.data});
-        })
-        alert('Are you sure want to Delete !!!')
-    }
-   
-    // onCkickDelete(q){
-    //     axios.post('http://localhost:3003/requisitions'+q._id)
-    //     .then(response => {
-    //         axios.get('http://localhost:3003/requisitions')
-    //         .then(data => {
-    //             console.log(data)
-    //             this.setState({
-    //                 data: data.data
-    //             })
-        
-    //         })
-    //     })
-    //     .catch(err => {
-    //         console.log(err)
-    //     })
-    // }
+
 
     render(){
         return(
@@ -99,8 +74,6 @@ export default class ApprovedAll extends Component{
                                                         <td>{q.perAgreedPrice}</td>
                                                         <td>{q.perApprovedSupplier}</td>
                                                         <td>{q.AccountNo}</td>
-                                                        <td><button className="btn btn-success col-sm-20 offset-sm-0">APPROVE</button>&nbsp;
-                                                        <button className="btn btn-danger col-sm-20 offset-sm-0"onClick={()=>{this.deleteOnSubmit()}}>DECLINE</button></td>
                                                     </tr>)}</tbody>
                                                     </table>
                                         </div><br/><br/>

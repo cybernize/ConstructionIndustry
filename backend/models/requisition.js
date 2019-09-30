@@ -39,6 +39,10 @@ const requisitionSchema = mongoose.Schema({
     createdAt: {
         type: Date,
         required: true
+    },
+    status: {
+      type: Number,
+      required:true
     }
 });
 

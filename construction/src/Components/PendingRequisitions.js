@@ -16,21 +16,34 @@ export default class PendingRequisitions extends Component{
     };
 
     componentDidMount(){
-        axios.get('http://localhost:3003/requisitions')
+        axios.get('http://localhost:3003/requisitions/toBeApproved')
         .then(res =>{
-            console.log(res);
+            console.log(res)
             this.setState({requisitions:res.data})
         })
            
     }
-    deleteOnSubmit(requisitionId){
-       // e.preventDefault();
-        axios.delete('http://localhost:3003/requisitions'+requisitionId._id)
+    deleteOnSubmit(e, id){
+       e.preventDefault();
+        axios.get('http://localhost:3003/requisitions/changeStatusDecline/'+id)
         .then(res=>{
-            console.log(res.data);
-            //this.setState({requisitions:res.data});
+            console.log(res)
+            axios.get('http://localhost:3003/requisitions/toBeApproved')
+                .then(res =>{
+                    this.setState({requisitions:res.data})
+                })
         })
-        alert('Are you sure want to Delete !!!')
+    }
+    approveOnSubmit(e, id) {
+        e.preventDefault();
+        axios.get('http://localhost:3003/requisitions/changeStatusApprove/'+id)
+            .then(res=>{
+                console.log(res)
+                axios.get('http://localhost:3003/requisitions/toBeApproved')
+                    .then(res =>{
+                        this.setState({requisitions:res.data})
+                    })
+            })
     }
    
     // onCkickDelete(q){
@@ -99,8 +112,8 @@ export default class PendingRequisitions extends Component{
                                                         <td>{q.perAgreedPrice}</td>
                                                         <td>{q.perApprovedSupplier}</td>
                                                         <td>{q.AccountNo}</td>
-                                                        <td><button className="btn btn-success col-sm-20 offset-sm-0">APPROVE</button>&nbsp;
-                                                        <button className="btn btn-danger col-sm-20 offset-sm-0"onClick={()=>{this.deleteOnSubmit()}}>DECLINE</button></td>
+                                                        <td><button className="btn btn-success col-sm-20 offset-sm-0" onClick={(e)=> this.approveOnSubmit(e, q._id)}>APPROVE</button>&nbsp;
+                                                        <button className="btn btn-danger col-sm-20 offset-sm-0"onClick={(e)=> this.deleteOnSubmit(e, q._id)}>DECLINE</button></td>
                                                     </tr>)}</tbody>
                                                     </table>
                                         </div><br/><br/>
@@ -111,4 +124,6 @@ export default class PendingRequisitions extends Component{
 
         )
     }
+
+
 }

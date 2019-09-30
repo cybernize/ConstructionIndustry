@@ -14,6 +14,26 @@ router.get('/',async (req,res)=>{
    
 });
 
+router.get('/toBeApproved',async (req,res)=>{
+    try{
+        const requisition = await Requisition.find({status: 0});
+        res.json(requisition);
+    }catch(err){
+        res.json({message:err});
+    }
+
+});
+
+router.get('/isApproved',async (req,res)=>{
+    try{
+        const requisition = await Requisition.find({status: 1});
+        res.json(requisition);
+    }catch(err){
+        res.json({message:err});
+    }
+
+});
+
 // Sumbit a REQUISITION Details
 router.post('/',async (req,res)=> {
  //  console.log(req.body);
@@ -25,7 +45,8 @@ router.post('/',async (req,res)=> {
         perAgreedPrice:req.body.perAgreedPrice,
         perApprovedSupplier:req.body.perApprovedSupplier,
         AccountNo:req.body.AccountNo,
-        createdAt:req.body.createdAt
+        createdAt:req.body.createdAt,
+        status: req.body.status
     });
 
     requDetails.save()
@@ -55,5 +76,24 @@ router.delete('/:requisitionId',(req,res)=>{
         })
 });
 
+router.get('/changeStatusApprove/:id',(req,res)=>{
+    Requisition.update({_id:req.params.id}, {$set: {'status': 1}})
+        .then(res =>{
+            res.json(res)
+        })
+        .catch(err => {
+            res.json(err)
+        })
+});
+
+router.get('/changeStatusDecline/:id',(req,res)=>{
+    Requisition.update({_id:req.params.id}, {$set: {'status': 2}})
+        .then(res =>{
+            res.json(res)
+        })
+        .catch(err => {
+            res.json(err)
+        })
+});
 
 module.exports = router;

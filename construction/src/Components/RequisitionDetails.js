@@ -44,7 +44,8 @@ export default class extends Component{
             perAgreedPrice:this.state.perAgreedPrice,
             perApprovedSupplier:this.state.perApprovedSupplier,
             AccountNo: this.state.AccountNo,
-            createdAt: Date.now()
+            createdAt: Date.now(),
+            status: 0
 
       }).then((requisitions)=>{
         document.getElementById('sname').value = "";
