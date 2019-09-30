@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import '../css/authzEmployee.css';
 import {Link,NavLink} from "react-router-dom";
 import auzEmployee from '../Images/auzEmployee.jpg';
+import axios from "axios";
 
 const authzEmployee1 ={
     paddingLeft: "40px",
@@ -16,6 +17,18 @@ const form ={
 };
 
 export default class DeclineRequisitions extends Component{
+    state={
+        requisitions:[],
+    };
+
+    componentDidMount(){
+        axios.get('http://localhost:3003/requisitions/isDecline')
+            .then(res =>{
+                console.log(res)
+                this.setState({requisitions:res.data})
+            })
+
+    }
 
     render(){
         return(
@@ -57,17 +70,17 @@ export default class DeclineRequisitions extends Component{
                                                         <th>Funding AccNo</th>
                                                         <th>Actions</th>
                                                     </tr></thead>
-                                                    <tbody>
-                                                        <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
+                                                    <tbody>{this.state.requisitions.map((q) =>
+                                                    <tr>
+                                                        <td>{q.siteName}</td>
+                                                        <td>{q.itemName}</td>
+                                                        <td>{q.type}</td>
+                                                        <td>{q.quantity}</td>
+                                                        <td>{q.perAgreedPrice}</td>
+                                                        <td>{q.perApprovedSupplier}</td>
+                                                        <td>{q.AccountNo}</td>
                                                         <td>DISAPPROVED</td>
-                                                    </tr></tbody>
+                                                    </tr>)}</tbody>
                                                     </table>
                                         </div><br/><br/>
                                 </div></form>
