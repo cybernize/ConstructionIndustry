@@ -23,6 +23,7 @@ import SupplierDetails from './Components/SupplierDetails';
 import ViewRequisitions from './Components/ViewRequisitions';
 import PendingRequisitions from './Components/PendingRequisitions';
 import DeclineRequisitions from './Components/DeclineRequisitions';
+import ApprovedAll from './Components/ApprovedAll';
 
 
 const background = {
@@ -102,6 +103,7 @@ class App extends Component {
                         <Route exact path='/ViewRequisitions' component={ViewRequisitions}/>
                         <Route exact path='/PendingRequisitions' component={PendingRequisitions}/>
                         <Route exact path='/DeclineRequisitions' component={DeclineRequisitions}/>
+                        <Route exact path='/ApprovedAll' component={ApprovedAll}/>
                     </Switch>
                     
             </Router><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>

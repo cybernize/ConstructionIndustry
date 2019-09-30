@@ -30,10 +30,10 @@ export default class extends Component{
         return(
             <div><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <Link to={'/SiteManagerHome'}><button className="btn btn-outline-dark col-sm-20 offset-sm-1">Site Manager</button></Link>
+            <Link to={'/SiteManagerHome'}><button className="btn btn-outline-warning col-sm-20 offset-sm-1">Site Manager</button></Link>
             <Link to={'/SupervisorHome'}><button className="btn btn-outline-success col-sm-20 offset-sm-1">Supervisor</button></Link>
             <Link to={'/SupplierHome'}><button className="btn btn-outline-primary col-sm-20 offset-sm-1">Supplier</button></Link>
-            <Link to={'/AuthzEmployeeHome'}><button className="btn btn-outline-warning col-sm-20 offset-sm-1">Authz Employee</button></Link>
+            <Link to={'/AuthzEmployeeHome'}><button className="btn btn-outline-dark col-sm-20 offset-sm-1">Authz Employee</button></Link>
             <Link to={'/Inventory'}><button className="btn btn-outline-danger col-sm-20 offset-sm-1">Inventory</button></Link><br/><br/>
    
             <MDBContainer>

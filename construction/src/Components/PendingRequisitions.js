@@ -61,7 +61,7 @@ export default class PendingRequisitions extends Component{
                 </section>
                 <br/>
                 <NavLink to={'/SupervisorHome'}>HOME</NavLink><br/>
-                <a href="#">APPROVED ALL REQUISIONS</a><br/>
+                <NavLink to={'/ApprovedAll'}>APPROVED ALL REQUISIONS</NavLink><br/>
                 {/* <NavLink to={'/DeclineRequisitions'}>DISAPPROVED REQUISIONS</NavLink><br/> */}
                 <NavLink to={'/PendingRequisitions'}>PENDING REQUISITIONS</NavLink><br/>
                 
