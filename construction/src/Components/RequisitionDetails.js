@@ -26,18 +26,24 @@ export default class extends Component{
             this.onSubmit = this.onSubmit.bind(this);   
     }
 
-    onChange(e){
+    onChange(e) {
+        var name = e.target.name;
         this.setState({
-            [e.target.name]:e.target.value
-        })
-        if(e.target.name == 'perAgreedPrice' || e.target.name == 'quantity'){
+            [e.target.name]: e.target.value
+        }, ()=>{this.changeTotalPrice(name)})
+
+    }
+
+    changeTotalPrice(name){
+        if(name == 'perAgreedPrice' || name == 'quantity') {
+            console.log(this.state)
             this.setState({
                 tprice: this.state.perAgreedPrice * this.state.quantity
             })
         }
-        console.log(e.target.name);
-        
     }
+        
+
   
     onSubmit(e){
         console.log(Date.now());
@@ -66,6 +72,15 @@ export default class extends Component{
         document.getElementById('supplier').value = "";
         document.getElementById('tprice').value="";
         document.getElementById('accNo').value = "";
+        this.setState({
+            siteName:'',
+            itemName:'',
+            type:'',
+            quantity:0,
+            perAgreedPrice:0,
+            perApprovedSupplier:'',
+            tprice:0,
+            AccountNo:''})
         alert('Requisitions Created Successfully')
         console.log(requisitions)
       }).catch((err)=>{
@@ -104,14 +119,14 @@ export default class extends Component{
                                         </div>
                                         <div className="col-md-4 mb-3 col-sm-20 offset-sm-1">
                                         <label htmlFor="details" ><b>Quantity : </b></label><br></br>
-                                        <input type="number" className="form-control" id="qty" placeholder="Enter quantity" name="quantity" 
-                                          required/><br/>
+                                        <input type="number" className="form-control" id="qty" placeholder="Enter quantity" name="quantity"
+                                               onChange={event => this.onChange(event)} required/><br/>
                                         </div>
 
                                         <div className="col-md-4 mb-3 col-sm-20 offset-sm-1">
                                         <label htmlFor="details" ><b>PerAgreed Price : </b></label><br></br>
-                                        <input type="number" className="form-control" id="price" placeholder="Enter price" name="perAgreedPrice" 
-                                          required/><br/>
+                                        <input type="number" className="form-control" id="price" placeholder="Enter price" name="perAgreedPrice"
+                                               onChange={event => this.onChange(event)} required/><br/>
                                         </div>
 
                                         <div className = "col-md-4 mb-3 col-sm-20 offset-sm-1">
