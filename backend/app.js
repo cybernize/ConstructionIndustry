@@ -40,15 +40,23 @@ app.use('/suppliers',Suppliers);
 
 
 // connect to db here
-mongoose.connect(process.env.DB_CONNECTION,
-{useNewUrlParser: true,
-useUnifiedTopology: true,},()=>
-console.log('DB Connected!!!!!!!!!')
-);
-
+function connect() {
+    return new Promise((resolve, reject) => {
+        mongoose.connect(process.env.DB_CONNECTION, {useNewUrlParser: true}).then((res, err) => {
+            if (err) return reject(err);
+            console.log("Connected to database")
+            resolve();
+        })
+    })
+};
+function close() {
+    return mongoose.disconnect();
+}
 // how to start to listening to the server
-app.listen(3003, function(){
-    console.log('server started !!!!');
-});
-
-//module.exports = app;
+connect()
+    .then(() => {
+        app.listen(3003, function () {
+            console.log("Server is running on Port:", 3003);
+        });
+    })
+module.exports = { connect, close, app };
