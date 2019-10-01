@@ -75,6 +75,7 @@ export default class extends Component{
                                                         <th>Quantity</th>
                                                         <th>PerAgreed Price</th>
                                                         <th>PerApproved Supplier</th>
+                                                        <th>Total Price</th>
                                                         <th>Funding AccNo</th>
                                                         <th></th>
                                                     </tr></thead>
@@ -86,6 +87,7 @@ export default class extends Component{
                                                         <td>{q.quantity}</td>
                                                         <td>{q.perAgreedPrice}</td>
                                                         <td>{q.perApprovedSupplier}</td>
+                                                        <td>{q.tprice}</td>
                                                         <td>{q.AccountNo}</td>
                                                         <td>
                                                         <button className="btn btn-success col-sm-20 offset-sm-0" onClick={this.handleClickedPurchaseOrder}>CREATE PURCHASE ORDER</button></td>

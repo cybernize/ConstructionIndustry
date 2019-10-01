@@ -25,6 +25,7 @@ import PendingRequisitions from './Components/PendingRequisitions';
 import DeclineRequisitions from './Components/DeclineRequisitions';
 import ApprovedAll from './Components/ApprovedAll';
 import UpdateRequisition from './Components/UpdateRequisition';
+//import ViewSupplierList from './Components/ViewSupplierList';
 
 
 const background = {
@@ -106,6 +107,7 @@ class App extends Component {
                         <Route exact path='/DeclineRequisitions' component={DeclineRequisitions}/>
                         <Route exact path='/ApprovedAll' component={ApprovedAll}/>
                         <Route exact path='/UpdateRequisition' component={UpdateRequisition}/>
+                        {/* <Route exact path='/ViewSupplierList' component={ViewSupplierList}/> */}
                     </Switch>
                     
             </Router><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>

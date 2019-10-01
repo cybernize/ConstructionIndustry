@@ -4,26 +4,11 @@ import {Link,NavLink} from "react-router-dom";
 import auzEmployee from '../Images/auzEmployee.jpg';
 import axios from 'axios';
 
-// const sectionStyle = {
-//     width: "1080px",
-//     height: "500px",
-//     opacity: 0.80,
-//     paddingRight:"303px",
-//     paddingLeft:"200px",
-//     marginLeft: "54px",
-//     backgroundImage: `url(${construction})`
-// };
 const authzEmployee1 ={
     paddingLeft: "40px",
     paddingRight:"40px"
 };
 
-const form ={
-    width: "803px", /* Full width */
-    height: "700",/* Full height */
-    position:"center",
-    border: "opx black",
-};
 
 export default class ViewRequisitions extends Component{
 
@@ -51,22 +36,6 @@ export default class ViewRequisitions extends Component{
         })
     }
    
-    // onCkickDelete(q){
-    //     axios.post('http://localhost:3003/requisitions'+q._id)
-    //     .then(response => {
-    //         axios.get('http://localhost:3003/requisitions')
-    //         .then(data => {
-    //             console.log(data)
-    //             this.setState({
-    //                 data: data.data
-    //             })
-        
-    //         })
-    //     })
-    //     .catch(err => {
-    //         console.log(err)
-    //     })
-    // }
 
     render(){
         return(

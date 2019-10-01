@@ -33,9 +33,10 @@ const purchaseOrderSchema = mongoose.Schema({
         required:true
     },
     status:{
-        type: Number,
+        type:Number,
         required:true
     }
+
 });
 
 module.exports = mongoose.model('purchaseOrder',purchaseOrderSchema);

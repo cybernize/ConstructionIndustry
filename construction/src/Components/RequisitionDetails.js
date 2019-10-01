@@ -60,7 +60,7 @@ export default class extends Component{
         document.getElementById('supplier').value = "";
         document.getElementById('tprice').value="";
         document.getElementById('accNo').value = "";
-        alert('Requisitions have been Created Successfully')
+        alert('Requisitions Created Successfully')
         console.log(requisitions)
       }).catch((err)=>{
         console.log(err)

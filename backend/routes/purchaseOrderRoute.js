@@ -36,7 +36,7 @@ router.post('/',async (req,res)=> {
     })
 });
 
-
+// delete a PURCHASE ORDER
 router.delete('/:purchaseId',(req,res)=>{
     PurchaseOrder.remove({_id:req.params.purchaseId})
         .then(res =>{

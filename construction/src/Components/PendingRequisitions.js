@@ -100,6 +100,7 @@ export default class PendingRequisitions extends Component{
                                                         <th>Quantity</th>
                                                         <th>PerAgreed Price</th>
                                                         <th>PerApproved Supplier</th>
+                                                        <th>Total Price</th>
                                                         <th>Funding AccNo</th>
                                                         <th>Actions</th>
                                                     </tr></thead>
@@ -111,6 +112,7 @@ export default class PendingRequisitions extends Component{
                                                         <td>{q.quantity}</td>
                                                         <td>{q.perAgreedPrice}</td>
                                                         <td>{q.perApprovedSupplier}</td>
+                                                        <td>{q.tprice}</td>
                                                         <td>{q.AccountNo}</td>
                                                         <td><button className="btn btn-success col-sm-20 offset-sm-0" onClick={(e)=> this.approveOnSubmit(e, q._id)}>APPROVE</button>&nbsp;
                                                         <button className="btn btn-danger col-sm-20 offset-sm-0"onClick={(e)=> this.deleteOnSubmit(e, q._id)}>DECLINE</button></td>

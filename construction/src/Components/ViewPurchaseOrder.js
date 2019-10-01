@@ -25,10 +25,22 @@ export default class ViewPurchaseOrder extends Component{
            
     }
 
-    deleteOnSubmit(){
-        
-    }
-   
+        deleteOnSubmit(e,id){
+            e.preventDefault(e);
+            axios.delete('http://localhost:3003/purchaseOrder/' +id)
+            .then(res =>{
+                console.log(res);
+                axios.get('http://localhost:3003/purchaseOrder')
+                     .then(res =>{
+                          console.log(res);
+                          this.setState({purchaseOrders:res.data})
+                     })
+
+            })
+        }
+
+
+
     render(){
         return(
             <div><br/><br/>
@@ -78,7 +90,7 @@ export default class ViewPurchaseOrder extends Component{
                                                         <td>{p.total}</td>
                                                         <td>{p.deliveryDate}</td>
                                                         <td><button className="btn btn-success col-sm-20 offset-sm-0">Update</button>&nbsp;
-                                                        <button className="btn btn-danger col-sm-20 offset-sm-0" >Delete</button></td>
+                                                        <button className="btn btn-danger col-sm-20 offset-sm-0" onClick={(e)=> this.deleteOnSubmit(e,p._id)}>Delete</button></td>
                                                     </tr>)}</tbody>
                                                     </table>
                                         </div><br/>

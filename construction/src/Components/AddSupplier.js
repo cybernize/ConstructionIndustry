@@ -53,8 +53,8 @@ export default class extends Component{
                     </section>
                     <br/><br/>
                     <NavLink to={'/SupplierHome'}>HOME</NavLink><br/>
-                    <NavLink to={'/ViewRequisitions'}>SHOW REQUISIONS</NavLink><br/>
-                    <a href="#">NEW ALERTS</a><br/>
+                    <NavLink to={'/ViewSupplierList'}>VIEW ADD SUPPLIERS</NavLink><br/>
+                    <NavLink to={'/AddSupplier'}>ADD SUPPLIERS</NavLink><br/>
 
                     <Link to={'/Home'}><button className="btn btn-outline-danger col-sm-20 offset-sm-1 align-content-md-center" type="submit">LOG OUT </button></Link>
 

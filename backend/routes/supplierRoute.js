@@ -36,12 +36,17 @@ router.post('/',async (req,res)=> {
         res.json({message:err});
     })
 
-    // try{
-    //     const savedDetails = await regDetails.save();
-    //     res.json(savedDetails);
-    // }catch(err){
-    //     res.json({message:err});
-    // }
+});
+
+// Delete SUPPLIERS in the List
+router.delete('/:supplierId',(req,res)=>{
+    Supplier.remove({_id:req.params.supplierId})
+        .then(res =>{
+            res.json(res)
+        })
+        .catch(err => {
+            res.json(err)
+        })
 });
 
 module.exports = router;
