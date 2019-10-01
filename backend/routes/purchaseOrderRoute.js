@@ -47,4 +47,25 @@ router.delete('/:purchaseId',(req,res)=>{
         })
 });
 
+router.get('/changeStatusSend/:id',(req,res)=>{
+    PurchaseOrder.update({_id:req.params.id}, {$set: {'status': 1}})
+        .then(res =>{
+            res.json(res)
+        })
+        .catch(err => {
+            res.json(err)
+        })
+});
+
+router.get('/isApproved',async (req,res)=>{
+    try{
+        const purchase = await PurchaseOrder.find({status: 1});
+        res.json(purchase);
+    }catch(err){
+        res.json({message:err});
+    }
+
+});
+
+
 module.exports = router;

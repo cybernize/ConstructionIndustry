@@ -26,7 +26,8 @@ import DeclineRequisitions from './Components/DeclineRequisitions';
 import ApprovedAll from './Components/ApprovedAll';
 import UpdateRequisition from './Components/UpdateRequisition';
 import ViewSupplierList from './Components/ViewSupplierList';
-
+import SendSupplier from './Components/SendSupplier';
+import SendAll from './Components/SendAll';
 
 const background = {
   //  background: "linear-gradient(to top right, #9999ff 0%, #ffcc99 104%)",
@@ -108,6 +109,8 @@ class App extends Component {
                         <Route exact path='/ApprovedAll' component={ApprovedAll}/>
                         <Route exact path='/UpdateRequisition' component={UpdateRequisition}/>
                         <Route exact path='/ViewSupplierList' component={ViewSupplierList}/>
+                        <Route exact path='/SendSupplier' component={SendSupplier}/>
+                        <Route exact path='/SendAll' component={SendAll}/>
                     </Switch>
                     
             </Router><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>

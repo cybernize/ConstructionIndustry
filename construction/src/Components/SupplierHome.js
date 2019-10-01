@@ -24,7 +24,8 @@ export default class extends Component{
                     <NavLink to={'/SupplierHome'}>HOME</NavLink><br/>
                     <NavLink to={'/ViewSupplierList'}>VIEW ADD SUPPLIERS</NavLink><br/>
                     <NavLink to={'/AddSupplier'}>ADD SUPPLIERS</NavLink><br/>
-                
+                    <NavLink to={'/SendAll'}>SENT PURCHASE ORDERS</NavLink><br/>
+
                     <Link to={'/Home'}><button className="btn btn-outline-danger col-sm-20 offset-sm-1 align-content-md-center" type="submit">LOG OUT </button></Link>
 
                 </div>

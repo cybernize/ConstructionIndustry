@@ -33,7 +33,8 @@ export default class extends Component{
     onSubmit(e){
         console.log(Date.now());
         e.preventDefault();
-
+        let status = 0;
+        //status = 0;
         axios.post('http://localhost:3003/purchaseOrder', {
             siteName:this.state.siteName,
             itemName:this.state.itemName,
@@ -41,7 +42,8 @@ export default class extends Component{
             quantity:this.state.quantity,
             total:this.state.total,
             deliveryDate:this.state.deliveryDate,
-            createdAt: Date.now()
+            createdAt: Date.now(),
+            status:status
 
       }).then((purchaseOrderDetails)=>{
         document.getElementById('sname').value = "";
@@ -51,7 +53,7 @@ export default class extends Component{
         document.getElementById('total').value = "";
         document.getElementById('deliveryDate').value = "";
     
-        alert('Purchase Orders have been Created Successfully')
+        alert('Purchase Order Created Successfully')
         console.log(purchaseOrderDetails)
       }).catch((err)=>{
         console.log(err)

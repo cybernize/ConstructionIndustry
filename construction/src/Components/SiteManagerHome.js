@@ -24,7 +24,7 @@ export default class extends Component{
                     <br/>
                     <NavLink to={'/SiteManagerHome'}>HOME</NavLink><br/>
                     <NavLink to={'/ViewPurchaseOrder'}>VIEW PURCHACE ORDER</NavLink><br/>
-                    <a href="#">SEARCH PURCHASE ORDERS</a><br/>
+                    <NavLink to={'/SendSupplier'}>SEND PURCHASE ORDERS</NavLink><br/>
                     <NavLink to={'/CreatePurchaceOrder'}>APPROVAL REQUISITIONS</NavLink><br/>
                     <a href="#">INVENTORY DETAILS</a><br/>
                   
