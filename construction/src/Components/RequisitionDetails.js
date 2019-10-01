@@ -116,7 +116,7 @@ export default class extends Component{
 
                                         <div className="col-md-4 mb-3 col-sm-20 offset-sm-1">
                                         <label htmlFor="details" ><b>Total Price : </b></label><br></br>
-                                        <input type="number" className="form-control" id="tprice" placeholder="Enter price" name="tprice" 
+                                        <input type="text" className="form-control" id="tprice" name="tprice" disabled
                                          onChange={event => this.onChange(event)}required/><br/>
                                         </div>
 
