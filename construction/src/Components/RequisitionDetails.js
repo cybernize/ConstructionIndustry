@@ -16,10 +16,10 @@ export default class extends Component{
                 siteName:'',
                 itemName:'',
                 type:'',
-                quantity:'',
-                perAgreedPrice:'',
+                quantity:0,
+                perAgreedPrice:0,
                 perApprovedSupplier:'',
-                tprice:'',
+                tprice:0,
                 AccountNo:''
             }
             this.onChange = this.onChange.bind(this);
@@ -30,6 +30,12 @@ export default class extends Component{
         this.setState({
             [e.target.name]:e.target.value
         })
+        if(e.target.name == 'perAgreedPrice' || e.target.name == 'quantity'){
+            this.setState({
+                tprice: this.state.perAgreedPrice * this.state.quantity
+            })
+        }
+        console.log(e.target.name);
         
     }
   
@@ -99,13 +105,13 @@ export default class extends Component{
                                         <div className="col-md-4 mb-3 col-sm-20 offset-sm-1">
                                         <label htmlFor="details" ><b>Quantity : </b></label><br></br>
                                         <input type="number" className="form-control" id="qty" placeholder="Enter quantity" name="quantity" 
-                                         onChange={event => this.onChange(event)}required/><br/>
+                                          required/><br/>
                                         </div>
 
                                         <div className="col-md-4 mb-3 col-sm-20 offset-sm-1">
                                         <label htmlFor="details" ><b>PerAgreed Price : </b></label><br></br>
                                         <input type="number" className="form-control" id="price" placeholder="Enter price" name="perAgreedPrice" 
-                                         onChange={event => this.onChange(event)}required/><br/>
+                                          required/><br/>
                                         </div>
 
                                         <div className = "col-md-4 mb-3 col-sm-20 offset-sm-1">
@@ -117,7 +123,7 @@ export default class extends Component{
                                         <div className="col-md-4 mb-3 col-sm-20 offset-sm-1">
                                         <label htmlFor="details" ><b>Total Price : </b></label><br></br>
                                         <input type="text" className="form-control" id="tprice" name="tprice" disabled
-                                         onChange={event => this.onChange(event)}required/><br/>
+                                          value={this.state.tprice} onChange={event => this.onChange(event)}required/><br/>
                                         </div>
 
                                         <div className = "col-sm-9 offset-sm-1 align-content-md-center">
