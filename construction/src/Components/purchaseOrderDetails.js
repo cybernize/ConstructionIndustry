@@ -24,6 +24,7 @@ export default class extends Component{
     }
 
     onChange(e){
+        console.log(e.target.value)
         this.setState({
             [e.target.name]:e.target.value
         })
@@ -42,7 +43,6 @@ export default class extends Component{
             quantity:this.state.quantity,
             total:this.state.total,
             deliveryDate:this.state.deliveryDate,
-            createdAt: Date.now(),
             status:status
 
       }).then((purchaseOrderDetails)=>{

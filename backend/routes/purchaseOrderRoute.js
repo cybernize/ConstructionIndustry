@@ -23,9 +23,10 @@ router.post('/',async (req,res)=> {
         type:req.body.type,
         quantity:req.body.quantity,
         total:req.body.total,
-        deliveryDate:req.body.deliveryDate
+        deliveryDate:req.body.deliveryDate,
+        status: req.body.status
     });
-
+    console.log(purchaseDetails)
     purchaseDetails.save()
     .then(data =>{
         res.json(data);
