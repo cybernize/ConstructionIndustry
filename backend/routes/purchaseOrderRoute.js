@@ -6,7 +6,7 @@ const PurchaseOrder = require('../models/purchaseOrder');
 //Get all the PURCHASE ORDER Deatails
 router.get('/',async (req,res)=>{
     try{
-        const purchase = await PurchaseOrder.find();
+        const purchase = await PurchaseOrder.find({status: 0});
         res.json(purchase);
     }catch(err){
         res.json({message:err});
