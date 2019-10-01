@@ -28,11 +28,11 @@ const supplierSchema = mongoose.Schema({
     cPerson:{
         type:String,
         required:true
-    },
-    status:{
-        type:Number,
-        required:true
     }
+    // status:{
+    //     type:Number,
+    //     required:true
+    // }
 });
 
 module.exports = mongoose.model('suppliers', supplierSchema);

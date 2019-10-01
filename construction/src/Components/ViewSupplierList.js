@@ -74,7 +74,7 @@ export default class ViewSupplierList extends Component{
                                                         <th>Contact Person</th>
                                                         <th>Actions</th>
                                                     </tr></thead>
-                                                    <tbody>{this.state.suppliers.map((q) => 
+                                                    <tbody> {this.state.suppliers.map((q) => 
                                                         <tr>
                                                         <td>{q.companyName}</td>
                                                         <td>{q.siteName}</td>

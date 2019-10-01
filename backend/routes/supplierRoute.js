@@ -7,7 +7,7 @@ const Supplier = require('../models/supplier');
 router.get('/',async (req,res)=>{
     try{
         const addSupplier = await Supplier.find();
-        res.json(purchase);
+        res.json(addSupplier);
     }catch(err){
         res.json({message:err});
     }
