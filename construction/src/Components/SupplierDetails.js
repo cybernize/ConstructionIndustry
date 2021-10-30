@@ -126,7 +126,7 @@ export default class extends Component{
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <br/>
                                         <button className="btn btn-primary offset-md-1" onClick={this.onSubmit}>ADD SUPPLIERS</button>
-                                        <Link to={'/SupplierHome'}><button className="btn btn-dark offset-md-1" >Cancel</button></Link>>
+                                        <Link to={'/SupplierHome'}><button className="btn btn-dark offset-md-1" >Cancel</button></Link>
                                         
                                     </div>
                                     <br/>

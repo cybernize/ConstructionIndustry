@@ -1,9 +1,9 @@
 import React,{Component} from 'react';
 import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask, MDBContainer } from
         'mdbreact';
-import  slide1 from "../Images/bg.jpg";
-import  slide2 from '../Images/bg2.jpg';
-import  slide3 from '../Images/construction.png';
+import  slide1 from "../Images/home.jpeg";
+import  slide2 from '../Images/home 2.jpeg';
+import  slide3 from '../Images/home 3.jpeg';
 import emergency from '../Images/emergency.jpg';
 import design from '../Images/design.jpg';
 import sustanability from '../Images/sustanability.jpg';
@@ -28,13 +28,14 @@ export default class extends Component{
 
     render() {
         return(
-            <div><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <Link to={'/SiteManagerHome'}><button className="btn btn-outline-warning col-sm-20 offset-sm-1">Site Manager</button></Link>
-            <Link to={'/SupervisorHome'}><button className="btn btn-outline-success col-sm-20 offset-sm-1">Supervisor</button></Link>
-            <Link to={'/SupplierHome'}><button className="btn btn-outline-primary col-sm-20 offset-sm-1">Supplier</button></Link>
-            <Link to={'/AuthzEmployeeHome'}><button className="btn btn-outline-dark col-sm-20 offset-sm-1">Authz Employee</button></Link>
-            <Link to={'/Inventory'}><button className="btn btn-outline-danger col-sm-20 offset-sm-1">Inventory</button></Link><br/><br/>
+            <div>
+                <div className="container py-3 d-flex justify-content-between">
+                    <Link to={'/SiteManagerHome'} className="btn btn-outline-secondary">Site Manager</Link>
+                    <Link to={'/SupervisorHome'} className="btn btn-outline-secondary">Project Manager</Link>
+                    <Link to={'/SupplierHome'} className="btn btn-outline-secondary">Procument Staff</Link>
+                    <Link to={'/AuthzEmployeeHome'} className="btn btn-outline-secondary">Authz Employee</Link>
+                    <Link to={'/Inventory'} className="btn btn-outline-secondary">Inventory</Link>
+                </div>
    
             <MDBContainer>
                 <MDBCarousel

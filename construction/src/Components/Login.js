@@ -16,7 +16,7 @@ const sectionStyle = {
 const form ={
     width: "550px", /* Full width */
     height: "200",/* Full height */
-    border: "3px solid black",
+    backgroundColor: "white"
 };
 
 

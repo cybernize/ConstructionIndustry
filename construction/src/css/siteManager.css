@@ -3,23 +3,29 @@
     width: 250px;
     position: fixed;
     z-index: 1;
-    top: 0;
-    left: 0;
-    background-color:#e6b3b3;
+    background-color:#f3f3f3;
     overflow-x: hidden;
     padding-top: 20px;
 }
 
-.sidenav a {
+.side-nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-nav-menu a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 14px;
     color: 	#2F4F4F;
     display: block;
 }
 
-.sidenav a:hover {
-    color: 	#000000;
+.side-nav-menu a:hover {
+    text-decoration: none;
+    color: 	white;
+    background-color: cornflowerblue;
 }
 
 .main {

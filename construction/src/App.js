@@ -28,11 +28,13 @@ import UpdateRequisition from './Components/UpdateRequisition';
 import ViewSupplierList from './Components/ViewSupplierList';
 import SendSupplier from './Components/SendSupplier';
 import SendAll from './Components/SendAll';
+import logo from './Images/logo.png';
+import './App.css';
 
 const background = {
   //  background: "linear-gradient(to top right, #9999ff 0%, #ffcc99 104%)",
   //    background: "linear-gradient(to bottom right, #cccc00 0%, #ffffcc 100%)",
-    background: "linear-gradient(to top right, #666699 0%, #ffcc00 100%)",
+    background: "white",
 };
 
 const backgroundNav = {
@@ -45,96 +47,81 @@ class App extends Component {
     render() {
         return (
             <section style={ background }>
-            <Router>
-                <br/>
+                <Router>
                     <section style={ background }>
                         <div className="container">
-                    <nav className="navbar navbar-expand-lg navbar-light btn-group-lg bg-transparent">
-                        <Link to={'/Home'} className="navbar-brand"><b><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>CONSTRUCTION Industry</i></h3></b></Link>
-                        <div className="collapse navbar-collapse" id="navbarSupportContent">
-                            <ul className="navbar-nav mr-auto">
-                                <li className="nav-item">
-                                    <Link to={'/Home'} className="nav-link">&nbsp;HOME</Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link to={'/Services'} className="nav-link">SERVICES</Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link to={'/Location'} className="nav-link">LOCATIONS</Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link to={'/'} className="nav-link">CONTACTUS</Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link to={'/AboutUs'} className="nav-link">ABOUTUS</Link>
-                                </li>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <nav className="navbar navbar-expand-lg navbar-light btn-group-lg bg-transparent justify-content-between">
+                                <Link to={'/Home'} className="navbar-brand"><img src={logo} alt="logo" width="100px"/></Link>
+                                <div className="" id="navbarSupportContent">
+                                    <ul className="navbar-nav mr-auto">
+                                        <li className="nav-item">
+                                            <Link to={'/Home'} className="nav-link">HOME</Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link to={'/Services'} className="nav-link">SERVICES</Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link to={'/Location'} className="nav-link">LOCATIONS</Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link to={'/'} className="nav-link">CONTACTUS</Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link to={'/AboutUs'} className="nav-link">ABOUTUS</Link>
+                                        </li>
+                                    </ul>
+                                </div>
                                 <form className="form-inline my-2 my-lg-0">
-                                    <input className="form-control rgba-mdb-color-light mr-sm-0" type="search" placeholder="Search" aria-label="Search"></input>
-                                </form>
-                                &nbsp;&nbsp;
+                                    <input className="form-control rgba-mdb-color-light mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
+                                    <Link to={'/Login'}>< button className="btn btn-outline-danger my-2 my-sm-0" type="submit">Login</button></Link>
                                 {/* <button className="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button> */}
-                                <Link to={'/Login'}>< button className="btn btn-outline-danger my-2 my-sm-0" type="submit">Login</button></Link>
-
-                            </ul>
+                                </form>
+                            </nav>
                         </div>
-                    </nav>
-
-                </div>
-                
                     </section>
 
-                    <Switch>
-                        <Route exact path='/createRequisition' component={createRequisition}/>
-                        <Route exact path='/Home' component={Home}/>
-                        <Route exact path='/Inventory' component={Inventory}/>
-                        <Route exact path='/supervisorHome' component={supervisorHome}/>
-                        <Route exact path='/SiteManagerHome' component={SiteManagerHome}/>
-                        <Route exact path='/Location' component={Location}/>
-                        <Route exact path='/AuthzEmployeeHome' component={AuthzEmployeeHome}/>
-                        <Route exact path='/SupplierHome' component={SupplierHome}/>
-                        <Route exact path='/Login' component={Login}/>
-                        <Route exact path='/RequisitionDetails' component={RequisitionDetails}/>
-                        <Route exact path='/Services' component={Services}/>
-                        <Route exact path='/AboutUs' component={AboutUs}/>
-                        <Route exact path='/Register' component={Register}/>
-                        <Route exact path='/CreatePurchaceOrder' component={CreatePurchaceOrder}/>
-                        <Route exact path='/PurchaseOrderDetails' component={PurchaseOrderDetails}/>
-                        <Route exact path='/ViewPurchaseOrder' component={ViewPurchaseOrder}/>
-                        <Route exact path='/AddSupplier' component={AddSupplier}/>
-                        <Route exact path='/SupplierDetails' component={SupplierDetails}/>
-                        <Route exact path='/ViewRequisitions' component={ViewRequisitions}/>
-                        <Route exact path='/PendingRequisitions' component={PendingRequisitions}/>
-                        <Route exact path='/DeclineRequisitions' component={DeclineRequisitions}/>
-                        <Route exact path='/ApprovedAll' component={ApprovedAll}/>
-                        <Route exact path='/UpdateRequisition' component={UpdateRequisition}/>
-                        <Route exact path='/ViewSupplierList' component={ViewSupplierList}/>
-                        <Route exact path='/SendSupplier' component={SendSupplier}/>
-                        <Route exact path='/SendAll' component={SendAll}/>
-                    </Switch>
-                    
-            </Router><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-            <section style={ background }>
-                        <div className="container">
-                    <nav className="navbar navbar-expand-lg navbar-light btn-group-lg bg-transparent">
-                        <div className="navbar-brand">
-                        <div className="collapse navbar-collapse" id="navbarSupportContent">
-                            <ul className="navbar-nav mr-auto">
-                               <li>
-                                   <center><h5>
-                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                   CopyRight @ SriLanka Construction coperation 2019</h5></center>
-                                   <br/>
-                               </li>
-                         </ul>
-                        </div>
-                        </div>
-                    </nav>
-                 </div>
+                        <Switch>
+                            <Route exact path='/createRequisition' component={createRequisition}/>
+                            <Route exact path='/Home' component={Home}/>
+                            <Route exact path='/Inventory' component={Inventory}/>
+                            <Route exact path='/supervisorHome' component={supervisorHome}/>
+                            <Route exact path='/SiteManagerHome' component={SiteManagerHome}/>
+                            <Route exact path='/Location' component={Location}/>
+                            <Route exact path='/AuthzEmployeeHome' component={AuthzEmployeeHome}/>
+                            <Route exact path='/SupplierHome' component={SupplierHome}/>
+                            <Route exact path='/Login' component={Login}/>
+                            <Route exact path='/RequisitionDetails' component={RequisitionDetails}/>
+                            <Route exact path='/Services' component={Services}/>
+                            <Route exact path='/AboutUs' component={AboutUs}/>
+                            <Route exact path='/Register' component={Register}/>
+                            <Route exact path='/CreatePurchaceOrder' component={CreatePurchaceOrder}/>
+                            <Route exact path='/PurchaseOrderDetails' component={PurchaseOrderDetails}/>
+                            <Route exact path='/ViewPurchaseOrder' component={ViewPurchaseOrder}/>
+                            <Route exact path='/AddSupplier' component={AddSupplier}/>
+                            <Route exact path='/SupplierDetails' component={SupplierDetails}/>
+                            <Route exact path='/ViewRequisitions' component={ViewRequisitions}/>
+                            <Route exact path='/PendingRequisitions' component={PendingRequisitions}/>
+                            <Route exact path='/DeclineRequisitions' component={DeclineRequisitions}/>
+                            <Route exact path='/ApprovedAll' component={ApprovedAll}/>
+                            <Route exact path='/UpdateRequisition' component={UpdateRequisition}/>
+                            <Route exact path='/ViewSupplierList' component={ViewSupplierList}/>
+                            <Route exact path='/SendSupplier' component={SendSupplier}/>
+                            <Route exact path='/SendAll' component={SendAll}/>
+                        </Switch>
+                        
+                </Router>
+                <footer style={ background }>
+                    <div className="main">
+                        <nav className="navbar navbar-expand-lg navbar-light btn-group-lg bg-transparent">
+                            <div className="navbar-brand">
+                                <div className="collapse navbar-collapse" id="navbarSupportContent">
+                                    <h5>CopyRight @ SriLanka Construction coperation 2021</h5>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
 
-            </section>
+                </footer>
             </section>
         )
     }

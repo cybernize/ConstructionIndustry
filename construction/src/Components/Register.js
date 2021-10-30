@@ -16,7 +16,7 @@ const sectionStyle = {
 const form ={
     width: "550px", /* Full width */
     height: "200",/* Full height */
-    border: "3px solid black",
+    backgroundColor: "white"
 };
 
 
@@ -71,6 +71,7 @@ export default class Register extends Component{
                 <br/>
                 <section style={ sectionStyle }>
                 <div className="col-sm-20 offset-sm-1 align-content-md-center">
+                    <br/>
                         <section style={ form }><br/>
 
                         <div className="form-row col-sm-20 offset-sm-1 align-content-md-center" >

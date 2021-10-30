@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import '../css/supervisor.css';
-import supervisorHome from '../Images/supervisorHome.jpg';
-import supervisor from '../Images/supervisor.jpg';
+import supervisorHome from '../Images/supervisor1.jpeg';
+import supervisor from '../Images/supervisor.jpeg';
 import {NavLink} from "react-router-dom";
 import {Link,Redirect } from "react-router-dom";
 
@@ -17,22 +17,22 @@ export default class extends Component{
             <div>
 
             <div className="sidenav" id="side">
-                <br/>
                 <section style={ supervisor1 }>
-                <img src={supervisor} width="150px" height="160px"/>
-                    <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Supervisor</h6>
+                <img src={supervisor} width="100%" height="160px"/>
+                    <h6 className="text-center">Project Manager</h6>
                 </section>
-                <br/>
-                <NavLink to={'/SupervisorHome'}>HOME</NavLink><br/>
-                <NavLink to={'/ApprovedAll'}>APPROVED ALL REQUISIONS</NavLink><br/>
-                {/* <NavLink to={'/DeclineRequisitions'}>DISAPPROVED REQUISIONS</NavLink><br/> */}
-                <NavLink to={'/PendingRequisitions'}>PENDING REQUISITIONS</NavLink><br/>
-                
-                <Link to={'/Home'}><button className="btn btn-outline-danger col-sm-20 offset-sm-1 align-content-md-center" type="submit">LOG OUT </button></Link>
+                <ul className="side-nav-menu">
+                    <li><NavLink to={'/SiteManagerHome'}>HOME</NavLink></li>
+                    <li><NavLink to={'/ApprovedAll'}>APPROVED ALL REQUISIONS</NavLink></li>
+                    <li><NavLink to={'/PendingRequisitions'}>PENDING REQUISITIONS</NavLink></li>
+                </ul>
+                <div className="p-3">
+                    <Link to={'/Home'} className="btn btn-outline-danger btn-sm col-sm-20 align-content-md-center">LOG OUT </Link>
+                </div>
             </div>
             <div className="main">
             <h2> Home Page</h2>
-                <img src={supervisorHome} width="1080px" height="500px"/>
+                <img src={supervisorHome} width="100%"/>
 
             </div>
             </div>
